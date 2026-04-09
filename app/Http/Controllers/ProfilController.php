@@ -21,7 +21,7 @@ class ProfilController extends Controller
             
         ];
 
-        return view('Landing.home', $data);
+        return view('Landing.profile', $data);
     }
 
     /**

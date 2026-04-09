@@ -11,11 +11,8 @@
                         </div>
                         <div class="footer-contact-detail">
                             <h3>contact us</h3>
-                            <p>T. <a href="tel:+123456789">+123 456 789</a></p>
-                            <p>M. <a href="mainto:info@domainname.com">info@domainname.com</a></p>
-                        </div>
-                        <div class="footer-contact-button">
-                            <a href="contact.html" class="btn-default btn-highlighted">contact us</a>
+                            <p><a href="">+62 0000 0000 0000</a></p>
+                            <p><a href="">info@domainname.com</a></p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -27,10 +24,7 @@
                         </div>
                         <div class="footer-contact-detail">
                             <h3>address</h3>
-                            <p>29721 Westheimer Road, Santa Ana, Illinois 85486</p>
-                        </div>
-                        <div class="footer-contact-button">
-                            <a href="contact.html" class="btn-default btn-highlighted">get direction</a>
+                            <p>It is a long established fact that a reader will be distracted by.</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -45,9 +39,6 @@
                             <p>Everyday: From 12.30 To 23.00</p>
                             <p>Kitchen Closes At 22.00</p>
                         </div>
-                        <div class="footer-contact-button">
-                            <a href="book-table.html" class="btn-default btn-highlighted">reserve a table</a>
-                        </div>
                     </div>
                     <!-- Footer Contact Item End -->
                 </div>
@@ -59,13 +50,13 @@
                 <div class="footer-copyright">
                     <!-- Footer Copyright Text Start -->
                     <div class="footer-copyright-text order-md-1 order-3">
-                        <p>Copyright © 2025 All Rights Reserved.</p>
+                        <p>Copyright © {{ date('Y') }} All Rights Reserved.</p>
                     </div>
                     <!-- Footer Copyright Text End -->
                     
                     <!-- Footer Logo Start -->
                     <div class="footer-logo order-md-2 order-1">
-                        <img src="images/footer-logo.svg" alt="">
+                        <img src="{{ asset('assets/landing-page/images/img/logo.png') }}" alt="Logo" style="width: 6rem;">
                     </div>
                     <!-- Footer Logo End -->
                     

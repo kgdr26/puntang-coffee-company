@@ -3,8 +3,8 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Logo Start -->
-                <a class="navbar-brand" href="index-2.html">
-                    <img src="{{ asset('assets/landing-page/images/logo.svg') }}" alt="Logo">
+                <a class="navbar-brand" href="">
+                    <img src="{{ asset('assets/landing-page/images/img/logo.png') }}" alt="Logo" style="width: 6rem;">
                 </a>
                 <!-- Logo End -->
 
@@ -17,7 +17,7 @@
                                 @if($menu->children->count())
 
                                     <li class="nav-item submenu">
-                                        <a class="nav-link" href="{{ route($menu->msmnu_route) }}">
+                                        <a class="nav-link" href="#">
                                             {{ $menu->msmnu_name }}
                                         </a>
 

@@ -1012,9 +1012,9 @@ body:has(.offcanvas){
 
 .hero{
 	position: relative;
-	background: url('../images/hero-bg.jpg') no-repeat;
+	background: url('../images/img/gmb1.png') no-repeat;
 	background-position: center center;
-	background-size: auto;
+	background-size: cover;
 	padding: 210px 0;
 }
 
@@ -1530,7 +1530,7 @@ body:has(.offcanvas){
 .intro-video{
 	position: relative;
 	padding: 200px 0 100px;
-	background-image: url('../images/intro-video-bg.jpg');
+	background-image: url('../images/img/gmb3.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -2359,7 +2359,7 @@ body:has(.offcanvas){
 
 .main-footer{
 	position: relative;
-	background: url(../images/footer-bg-image.jpg) no-repeat;
+	background: url(../images/img/gmb4.png) no-repeat;
 	background-position: center center;
 	background-size: cover;
 	padding: 100px 0 0;
@@ -2508,7 +2508,7 @@ body:has(.offcanvas){
 
 .page-header{
 	position: relative;
-	background-image: url('../images/page-header-bg.jpg');
+	background-image: url('../images/img/gmb5.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;

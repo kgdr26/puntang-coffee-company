@@ -21,7 +21,7 @@ class HistoryController extends Controller
             
         ];
 
-        return view('Landing.home', $data);
+        return view('Landing.history', $data);
     }
 
     /**

@@ -21,7 +21,7 @@ class EventController extends Controller
             
         ];
 
-        return view('Landing.home', $data);
+        return view('Landing.event', $data);
     }
 
     /**
