@@ -153,8 +153,187 @@
 <!-- Page Blog Start -->
 <div class="page-blog">
     <div class="container">
+        <div class="row">
 
+            <div class="col-12">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="white-space: nowrap;padding-right: 1rem !important;"><strong>Three-Phase CSR Approach</strong></td>
+                        <td style="padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>OBJECTIVE</strong></td>
+                        <td style="border-left: 1px solid #FFFFFF;padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>PROBLEM</strong></td>
+                        <td style="border-left: 1px solid #FFFFFF;padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>ACTIVITY</strong></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" style="padding: 0rem !important;">
+                            <img src="{{ asset('assets/landing-page/images/img/gmb_fi2.png') }}" alt="">
+                        </td>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Increase production volume and coffee quality
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            <ul>
+                                <li>Only 60% coffee field were planted</li>
+                                <li>Aging Coffee Trees is not productive</li>
+                                <li>Degraded agroforestry ecosystem caused by lack of Endemic Trees</li>
+                                <li>Place to mixed up the material for organic fertilizer is not available</li>
+                            </ul>
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <ul>
+                                <li><strong>Planting</strong> Coffee Trees</li>
+                                <li><strong>Rejuvenation</strong> of Aging Trees</li>
+                                <li><strong>Nursery</strong> of Endemic Trees</li>
+                                <li>Construction of <strong>Compost House</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        {{-- <td style="padding: 1rem !important;">Three-Phase CSR Approach</td> --}}
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Improve productivity and operational efficiency
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            <ul>
+                                <li>Drying bean depends on weather</li>
+                                <li>Existing Processing area is far from the field & impacted to the quality</li>
+                                <li>Using car battery for electricity</li>
+                                <li>Road is slippery and full of mud while rain</li>
+                            </ul>
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <ul>
+                                <li>Construction of <strong>two Green House</strong></li>
+                                <li>Construction of <strong>Processing House</strong></li>
+                                <li><strong>Electrical</strong> installation</li>
+                                <li>Construction of <strong>access roads</strong> in two area</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        {{-- <td style="padding: 1rem !important;">Three-Phase CSR Approach</td> --}}
+                        <td style="padding: 1rem !important;">
+                            Expanding market reach
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;">
+                            <ul>
+                                <li>Public product knowledge of this community is less</li>
+                            </ul>
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;">
+                            <ul>
+                                <li>Development of a <strong>website</strong> as a branding and promotion platform</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
+        </div>
+    </div>
+</div>
+
+<!-- Page Blog Start -->
+<div class="page-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="post-item wow fadeInUp">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.8s">ACTIVITY OUTCOMES</h2>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>YEAR</strong></td>
+                        <td style="border-left: 1px solid #FFFFFF;padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>PROGRAM</strong></td>
+                        <td style="border-left: 1px solid #FFFFFF;padding-left: 1rem !important;border-bottom: 1px solid #FFFFFF;"><strong>OUTPUT</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023 - 2024
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Plantation of Coffee Trees
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <strong>4250</strong> Coffee Trees have been planted
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Rejuvenation of Coffee Trees
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <strong>800</strong> Coffee Trees have been rejuvenated 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Nursery of Endemic Trees
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <strong>100</strong> Endemic Trees have been nurtured
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Green House
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            More efficient drying time for coffee cherry up to <strong>15 days reduction in 2 ton capacity</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Compost House
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            Utilizing animal waste & cherry skin become <strong>compost in 10 ton capacity</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            2023
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;border-bottom: 1px solid #FFFFFF;">
+                            Access Road
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; border-bottom: 1px solid #FFFFFF;">
+                            <strong>150 x 2,5 sqm</strong> has been built on the access to the coffee plantation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem !important;">
+                            2024
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important;">
+                            Electrical Installation
+                        </td>
+                        <td style="border-left: 1px solid #FFFFFF;padding: 1rem !important; ">
+                            <strong>900kWh</strong> electricity have been installed
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-4">
+
+            </div>
+
+        </div>
     </div>
 </div>
 
