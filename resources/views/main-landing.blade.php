@@ -45,37 +45,6 @@
 	</div>
 	<!-- Preloader End -->
 
-    <!-- Topbar Section Start -->
-    <div class="topbar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-9">
-                    <!-- Topbar Contact Information Start -->
-                    <div class="topbar-contact-info">
-                        <ul>
-                            <li><a href="mailto:{{ setting('mss_email') }}"><img src="{{ asset('assets/landing-page/images/icon-mail.svg') }}" alt="">{{ setting('mss_email') }}</a></li>
-                            <li><img src="{{ asset('assets/landing-page/images/icon-location.svg') }}" alt="">{{ setting('mss_address_min') }}</li>
-                        </ul>
-                    </div>
-                    <!-- Topbar Contact Information End -->
-                </div>
-
-                <div class="col-md-3">
-                    <!-- Topbar Social Links Start -->
-                    <div class="topbar-social-links">
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- Topbar Social Links End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar Section End -->
-
     <!-- Header Start -->
     @include('Landing.component.header')
     <!-- Header End -->

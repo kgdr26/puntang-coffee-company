@@ -21,7 +21,7 @@ class ActivityController extends Controller
             
         ];
 
-        return view('Landing.home', $data);
+        return view('Landing.activity', $data);
     }
 
     /**

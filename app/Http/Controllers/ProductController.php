@@ -21,7 +21,9 @@ class ProductController extends Controller
             
         ];
 
-        return view('Landing.home', $data);
+        $data['listproduct'] = ['gmb_f10.png','gmb_f11.png','gmb_f12.png','gmb_f13.png','gmb_f14.png','gmb_f15.png'];
+
+        return view('Landing.product', $data);
     }
 
     /**

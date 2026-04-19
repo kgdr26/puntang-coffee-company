@@ -1018,7 +1018,16 @@ body:has(.offcanvas){
 	padding: 210px 0;
 }
 
-.hero::before{
+.hero-home{
+	position: relative;
+	background: url('../images/img/gmb_f1.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 210px 0;
+}
+
+.hero::before,
+.hero-home::before{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -2513,6 +2522,18 @@ body:has(.offcanvas){
 	background-position: center center;
 	background-size: cover;
 	padding: 160px 0;
+}
+
+.page-header.about{
+	background-image: url('../images/img/gmb_f4.png') !important;
+}
+
+.page-header.product{
+	background-image: url('../images/img/gmb_f9.png') !important;
+}
+
+.page-header.activity{
+	background-image: url('../images/img/gmb_f16.png') !important;
 }
 
 .page-header::before{

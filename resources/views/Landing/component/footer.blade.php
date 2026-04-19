@@ -11,8 +11,8 @@
                         </div>
                         <div class="footer-contact-detail">
                             <h3>contact us</h3>
-                            <p><a href="">+62 0000 0000 0000</a></p>
-                            <p><a href="">info@domainname.com</a></p>
+                            <p><a href="">+62 823-1507-8798</a></p>
+                            <p><a href="">Deni Sopyan (Abah Onil)</a></p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -24,7 +24,7 @@
                         </div>
                         <div class="footer-contact-detail">
                             <h3>address</h3>
-                            <p>It is a long established fact that a reader will be distracted by.</p>
+                            <p>LMDH Bukit Amanah Gunung Puntang, Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat.</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -35,9 +35,9 @@
                             <img src="{{ asset('assets/landing-page/images/icon-clock-accent.svg') }}" alt="">
                         </div>
                         <div class="footer-contact-detail">
-                            <h3>opening hours</h3>
-                            <p>Everyday: From 12.30 To 23.00</p>
-                            <p>Kitchen Closes At 22.00</p>
+                            <h3>Marketplace</h3>
+                            <p>-</p>
+                            <p>-</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
