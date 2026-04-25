@@ -21,7 +21,37 @@ class ActivityController extends Controller
             
         ];
 
-        return view('Landing.activity', $data);
+        return view('Landing.activity.event', $data);
+    }
+
+    public function csr()
+    {
+        // include css yang di perlukan
+        $data['css'] = [
+            
+        ];
+
+        // include js yang di perlukan
+        $data['js'] = [
+            
+        ];
+
+        return view('Landing.activity.csr', $data);
+    }
+
+    public function program()
+    {
+        // include css yang di perlukan
+        $data['css'] = [
+            
+        ];
+
+        // include js yang di perlukan
+        $data['js'] = [
+            
+        ];
+
+        return view('Landing.activity.program', $data);
     }
 
     /**

@@ -23,7 +23,24 @@ class ProductController extends Controller
 
         $data['listproduct'] = ['gmb_f10.png','gmb_f11.png','gmb_f12.png','gmb_f13.png','gmb_f14.png','gmb_f15.png'];
 
-        return view('Landing.product', $data);
+        return view('Landing.product.our', $data);
+    }
+
+    public function proccesing()
+    {
+        // include css yang di perlukan
+        $data['css'] = [
+            
+        ];
+
+        // include js yang di perlukan
+        $data['js'] = [
+            
+        ];
+
+        $data['listproduct'] = ['gmb_f10.png','gmb_f11.png','gmb_f12.png','gmb_f13.png','gmb_f14.png','gmb_f15.png'];
+
+        return view('Landing.product.processing', $data);
     }
 
     /**

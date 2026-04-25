@@ -1,78 +1,84 @@
-<footer class="main-footer parallaxie">
+<footer id="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- Footer Contact List Start -->
-                <div class="footer-contact-list">
-                    <!-- Footer Contact Item Start -->
-                    <div class="footer-contact-item">
-                        <div class="icon-box">
-                            <img src="{{ asset('assets/landing-page/images/icon-phone-accent.svg') }}" alt="">
-                        </div>
-                        <div class="footer-contact-detail">
-                            <h3>contact us</h3>
-                            <p><a href="">+62 823-1507-8798</a></p>
-                            <p><a href="">Deni Sopyan (Abah Onil)</a></p>
-                        </div>
-                    </div>
-                    <!-- Footer Contact Item End -->
-                    
-                    <!-- Footer Contact Item Start -->
-                    <div class="footer-contact-item">
-                        <div class="icon-box">
-                            <img src="{{ asset('assets/landing-page/images/icon-location-accent.svg') }}" alt="">
-                        </div>
-                        <div class="footer-contact-detail">
-                            <h3>address</h3>
-                            <p>LMDH Bukit Amanah Gunung Puntang, Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat.</p>
-                        </div>
-                    </div>
-                    <!-- Footer Contact Item End -->
-                    
-                    <!-- Footer Contact Item Start -->
-                    <div class="footer-contact-item">
-                        <div class="icon-box">
-                            <img src="{{ asset('assets/landing-page/images/icon-clock-accent.svg') }}" alt="">
-                        </div>
-                        <div class="footer-contact-detail">
-                            <h3>Marketplace</h3>
-                            <p>-</p>
-                            <p>-</p>
-                        </div>
-                    </div>
-                    <!-- Footer Contact Item End -->
+        <div class="footer-ribbon">
+            <span>Get in Touch</span>
+        </div>
+        <div class="row py-5 my-4">
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <h5 class="text-3 mb-3">NEWSLETTER</h5>
+                <p class="pe-1">
+                    Lembaga Masyarakat Desa Hutan Bukit Amanah Gunung Puntang
+                    LMDH Bukit Amanah Gunung Puntang, Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat
+                </p>
+                <div class="alert alert-success d-none" id="newsletterSuccess">
+                    <strong>Success!</strong> You've been added to our email list.
                 </div>
-                <!-- Footer Contact List End -->
+                <div class="alert alert-danger d-none" id="newsletterError"></div>
             </div>
-
-            <div class="col-lg-12">
-                <!-- Footer Copyright Start -->
-                <div class="footer-copyright">
-                    <!-- Footer Copyright Text Start -->
-                    <div class="footer-copyright-text order-md-1 order-3">
-                        <p>Copyright © {{ date('Y') }} All Rights Reserved.</p>
-                    </div>
-                    <!-- Footer Copyright Text End -->
-                    
-                    <!-- Footer Logo Start -->
-                    <div class="footer-logo order-md-2 order-1">
-                        <img src="{{ asset('assets/landing-page/images/img/logo.png') }}" alt="Logo" style="width: 6rem;">
-                    </div>
-                    <!-- Footer Logo End -->
-                    
-                    <!-- Footer Social Links Start -->
-                    <div class="footer-social-links order-md-3 order-2">
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Social Links End -->
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <h5 class="text-3 mb-3">LATEST POSTS</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2 pb-1">
+                        <a href="#">
+                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
+                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
+                        </a>
+                    </li>
+                    <li class="mb-2 pb-1">
+                        <a href="#">
+                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Ipsum dolor sit amet.</strong></p>
+                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
+                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                <div class="contact-details">
+                    <h5 class="text-3 mb-3">CONTACT US</h5>
+                    <ul class="list list-icons list-icons-lg">
+                        <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">LMDH Bukit Amanah Gunung Puntang</p></li>
+                        <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="">+62 823-1507-8798</a></p></li>
+                        <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="">mail@example.com</a></p></li>
+                    </ul>
                 </div>
-                <!-- Footer Copyright End -->
+            </div>
+            <div class="col-md-6 col-lg-2">
+                <h5 class="text-3 mb-3">FOLLOW US</h5>
+                <ul class="social-icons">
+                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container py-2">
+            <div class="row py-4">
+                <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+                    <a href="index.html" class="logo pe-0 pe-lg-3">
+                        <img alt="Porto Website Template" src="{{ asset('assets/img/logo.png') }}" class="opacity-5" width="49" height="22" data-plugin-options="{'appearEffect': 'fadeIn'}">
+                    </a>
+                </div>
+                <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+                    <p>© Copyright {{ date('Y') }}. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <nav id="sub-menu">
+                        <ul>
+                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> FAQ's</a></li>
+                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> Sitemap</a></li>
+                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
 </footer>
-    

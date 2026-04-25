@@ -1,94 +1,95 @@
 <!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-    <title>Puntang Coffee || @yield('title')</title>
-	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/landing-page/images/favicon.png') }}">
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="{{ asset('assets/landing-page/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="{{ asset('assets/landing-page/css/slicknav.min.css') }}" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="{{ asset('assets/landing-page/css/swiper-bundle.min.css') }}">
-	<!-- Font Awesome Icon Css-->
-	<link href="{{ asset('assets/landing-page/css/all.min.css') }}" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="{{ asset('assets/landing-page/css/animate.css') }}" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="{{ asset('assets/landing-page/css/magnific-popup.css') }}">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="{{ asset('assets/landing-page/css/mousecursor.css') }}">
-	<!-- Main Custom Css -->
-    {!! theme_css('landing') !!}
-	<link href="{{ asset('assets/landing-page/css/custom.css') }}" rel="stylesheet" media="screen">
-</head>
-<body>
+<html lang="en">
+	<head>
 
-    <!-- Preloader Start -->
-	<div class="preloader">
-		<div class="loading-container">
-			<div class="loading"></div>
-			<div id="loading-icon"><img src="{{ asset('assets/landing-page/images/loader.svg') }}" alt=""></div>
-		</div>
-	</div>
-	<!-- Preloader End -->
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Header Start -->
-    @include('Landing.component.header')
-    <!-- Header End -->
+		<title>Puntang Coffee || @yield('title')</title>	
 
-    <!-- Main Content Start -->
-    @yield('content')
-    <!-- Main Content End -->
+		<meta name="keywords" content="WebSite Template" />
+		<meta name="description" content="Puntang Coffee">
+		<meta name="author" content="">
 
-    <!-- Main Footer Section Start -->
-    @include('Landing.component.footer')
-    <!-- Main Footer Section End -->
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-    <!-- Jquery Library File -->
-    <script src="{{ asset('assets/landing-page/js/jquery-3.7.1.min.js') }}"></script>
-    <!-- Bootstrap js file -->
-    <script src="{{ asset('assets/landing-page/js/bootstrap.min.js') }}"></script>
-    <!-- Validator js file -->
-    <script src="{{ asset('assets/landing-page/js/validator.min.js') }}"></script>
-    <!-- SlickNav js file -->
-    <script src="{{ asset('assets/landing-page/js/jquery.slicknav.js') }}"></script>
-    <!-- Swiper js file -->
-    <script src="{{ asset('assets/landing-page/js/swiper-bundle.min.js') }}"></script>
-    <!-- Counter js file -->
-    <script src="{{ asset('assets/landing-page/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/landing-page/js/jquery.counterup.min.js') }}"></script>
-    <!-- Isotop js file -->
-	<script src="{{ asset('assets/landing-page/js/isotope.min.js') }}"></script>
-    <!-- Magnific js file -->
-    <script src="{{ asset('assets/landing-page/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- SmoothScroll -->
-    <script src="{{ asset('assets/landing-page/js/SmoothScroll.js') }}"></script>
-    <!-- Parallax js -->
-    <script src="{{ asset('assets/landing-page/js/parallaxie.js') }}"></script>
-    <!-- MagicCursor js file -->
-    <script src="{{ asset('assets/landing-page/js/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/landing-page/js/magiccursor.js') }}"></script>
-    <!-- Text Effect js file -->
-    <script src="{{ asset('assets/landing-page/js/SplitText.js') }}"></script>
-    <script src="{{ asset('assets/landing-page/js/ScrollTrigger.min.js') }}"></script>
-    <!-- YTPlayer js File -->
-    <script src="{{ asset('assets/landing-page/js/jquery.mb.YTPlayer.min.js') }}"></script>
-    <!-- Wow js file -->
-    <script src="{{ asset('assets/landing-page/js/wow.min.js') }}"></script>
-    <!-- Main Custom js file -->
-    <script src="{{ asset('assets/landing-page/js/function.js') }}"></script>
-</body>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/fontawesome-free/css/all.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/animate/animate.compat.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/simple-line-icons/css/simple-line-icons.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/owl.carousel/assets/owl.carousel.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/magnific-popup/magnific-popup.min.css') }}">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/theme.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/theme-elements.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/theme-blog.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/theme-shop.css') }}">
+
+		<!-- Revolution Slider CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/rs-plugin/css/settings.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/rs-plugin/css/layers.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/rs-plugin/css/navigation.css') }}">
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/circle-flip-slideshow/css/component.css') }}">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="{{ asset('assets/landing-page/css/skins/default.css') }}">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/custom.css') }}">
+
+	</head>
+    <body data-plugin-page-transition>
+
+        <div class="body">
+
+            <!-- Header Start -->
+            @include('Landing.component.header')
+            <!-- Header End -->
+
+            <div role="main" class="main">
+                <!-- Main Content Start -->
+                @yield('content')
+                <!-- Main Content End -->
+            </div>
+
+            <!-- Main Footer Section Start -->
+            @include('Landing.component.footer')
+            <!-- Main Footer Section End -->
+
+        </div>
+
+        <!-- Vendor -->
+		<script src="{{ asset('assets/landing-page/vendor/plugins/js/plugins.min.js') }}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{{ asset('assets/landing-page/js/theme.js') }}"></script>
+
+		<!-- Revolution Slider Scripts -->
+		<script src="{{ asset('assets/landing-page/vendor/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+		<script src="{{ asset('assets/landing-page/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+		<!-- Circle Flip Slideshow Script -->
+		<script src="{{ asset('assets/landing-page/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js') }}"></script>
+		<!-- Current Page Views -->
+		<script src="{{ asset('assets/landing-page/js/views/view.home.js') }}"></script>
+
+		<!-- Theme Custom -->
+		<script src="{{ asset('assets/landing-page/js/custom.js') }}"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="{{ asset('assets/landing-page/js/theme.init.js') }}"></script>
+		<script src="{{ asset('assets/landing-page/js/examples/examples.portfolio.js') }}"></script>
+    </body>
 </html>
