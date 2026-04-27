@@ -25,7 +25,7 @@
                 <li class="user-profile header-notification">
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="{{ asset('assets/main-admin/images/avatar-4.jpg') }}" class="img-radius" alt="User-Profile-Image">
+                            <img src="{{ asset('assets/img/profile/'.admin()->image) }}" class="img-radius" alt="User-Profile-Image">
                             <span>{{ admin()->name }}</span>
                             <i class="feather icon-chevron-down"></i>
                         </div>
@@ -34,11 +34,6 @@
                             <li>
                                 <a href="">
                                     <i class="feather icon-user"></i> Profile
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="feather icon-lock"></i> Lock Screen
                                 </a>
                             </li>
                             <li>

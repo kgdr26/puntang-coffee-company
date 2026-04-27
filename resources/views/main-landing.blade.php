@@ -45,7 +45,11 @@
 		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/circle-flip-slideshow/css/component.css') }}">
 
 		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="{{ asset('assets/landing-page/css/skins/default.css') }}">
+		{{-- <link id="skinCSS" rel="stylesheet" href="{{ asset('assets/landing-page/css/skins/default.css') }}"> --}}
+
+		<style>
+			{!! $themeCss !!}
+		</style>
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/custom.css') }}">

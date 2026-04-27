@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,5 +22,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        $settings = DB::table('theme_settings')->get();
+
+        $css = ":root {";
+        foreach ($settings as $item) {
+            $css .= "--{$item->name}: {$item->value};";
+        }
+        $css .= "}";
+
+        View::share('themeCss', $css);
+
     }
 }

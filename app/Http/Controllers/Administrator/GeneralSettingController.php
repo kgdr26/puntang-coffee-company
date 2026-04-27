@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Administrator;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HistoryController extends Controller
+class GeneralSettingController extends Controller
 {
-    /**
-     * halaman utama module
-     */
     public function index()
     {
+
         // include css yang di perlukan
         $data['css'] = [
             
@@ -18,10 +17,14 @@ class HistoryController extends Controller
 
         // include js yang di perlukan
         $data['js'] = [
-            
+            asset('assets/main-admin/plugins/i18next/dist/umd/i18next.min.js'),
+            asset('assets/main-admin/plugins/i18next-http-backend/i18nextHttpBackend.min.js'),
+            asset('assets/main-admin/plugins/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js'),
+            asset('assets/main-admin/plugins/jquery-i18next/jquery-i18next.min.js'),
         ];
 
-        return view('Landing.history', $data);
+        return view('Administrator.generalsetting', $data);
+
     }
 
     /**

@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Administrator;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class VariantController extends Controller
+class UsersController extends Controller
 {
-    /**
-     * halaman utama module
-     */
     public function index()
     {
+
         // include css yang di perlukan
         $data['css'] = [
             
@@ -18,10 +17,11 @@ class VariantController extends Controller
 
         // include js yang di perlukan
         $data['js'] = [
-            
+           
         ];
 
-        return view('Landing.variant', $data);
+        return view('Administrator.generalsetting', $data);
+
     }
 
     /**

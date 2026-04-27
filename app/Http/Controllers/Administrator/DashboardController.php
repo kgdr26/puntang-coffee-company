@@ -17,7 +17,12 @@ class DashboardController extends Controller
 
         // include js yang di perlukan
         $data['js'] = [
-            
+            asset('assets/main-admin/plugins/chart.js/dist/chart.umd.js'),
+            asset('assets/main-admin/pages/widget/amchart/amcharts.js'),
+            asset('assets/main-admin/pages/widget/amchart/serial.js'),
+            asset('assets/main-admin/pages/widget/amchart/light.js'),
+            asset('assets/main-admin/js/SmoothScroll.js'),
+            asset('assets/main-admin/pages/dashboard/crm-dashboard.js'),
         ];
 
         return view('Administrator.dasbor', $data);
