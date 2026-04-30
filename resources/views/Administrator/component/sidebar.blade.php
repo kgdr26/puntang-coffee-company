@@ -19,11 +19,23 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="">
+            <li class="pcoded-hasmenu {{ request()->routeIs('admin.mngevent') || request()->routeIs('admin.formevent') || request()->routeIs('admin.mngcsr') || request()->routeIs('admin.formcsr') ? 'active pcoded-trigger' : '' }}">
+                <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-activity"></i></span>
                     <span class="pcoded-mtext">Activity Management</span>
                 </a>
+                <ul class="pcoded-submenu">
+                    <li class="{{ request()->routeIs('admin.mngevent') || request()->routeIs('admin.formevent') ? 'active' : '' }}">
+                        <a href="{{ route('admin.mngevent') }}">
+                            <span class="pcoded-mtext">Event</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->routeIs('admin.mngcsr') || request()->routeIs('admin.formcsr') ? 'active' : '' }}">
+                        <a href="{{ route('admin.mngcsr') }}">
+                            <span class="pcoded-mtext">CSR</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
             <li class="{{ request()->routeIs('admin.generalsetting') ? 'active' : '' }}">

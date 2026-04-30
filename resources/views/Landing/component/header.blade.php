@@ -54,7 +54,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-item {{ request()->routeIs('event') || request()->routeIs('csr') || request()->routeIs('program') ? 'active' : '' }}" href="#">
+                                            <a class="dropdown-item {{ request()->routeIs('event') || request()->routeIs('csr') || request()->routeIs('program') || request()->routeIs('getevent') ? 'active' : '' }}" href="#">
                                                 ACTIVITY
                                             </a>
                                             <ul class="dropdown-menu">

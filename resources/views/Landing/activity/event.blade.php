@@ -30,22 +30,6 @@
                         <button type="submit" class="btn btn-dark text-1 p-2"><i class="fas fa-search m-2"></i></button>
                     </div>
                 </form>
-                <h5 class="font-weight-semi-bold pt-4">Categories</h5>
-                <ul class="nav nav-list flex-column mb-5">
-                    <li class="nav-item"><a class="nav-link" href="#">Design (2)</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Photos (4)</a>
-                        <ul>
-                            <li class="nav-item"><a class="nav-link" href="#">Animals</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="#">Business</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">People</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Videos (3)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lifestyle (2)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Technology (1)</a></li>
-                </ul>
                 <h5 class="font-weight-semi-bold pt-4">About Us</h5>
 				<p>“We Care, We Share” LMDH Bukit Amanah Gunung Puntang bersama NIPPON STEEL. *(directing to the explanation of CSR)</p>
             </aside>
@@ -53,104 +37,61 @@
         <div class="col-lg-9">
             <div class="blog-posts">
 
-                <article class="post post-medium">
-                    <div class="row mb-3">
-                        <div class="col-lg-5">
-                            <div class="post-image">
-                                <a href="blog-post.html">
-                                    <img src="{{ asset('assets/landing-page/img/blog/medium/blog-11.jpg') }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="post-content">
-                                <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2">
-                                    <a href="">Atlanta, 2016</a>
-                                </h2>
-                                <p class="mb-0">
-                                    Juara Dunia ajang Specialty Coffee Association of America Expo, Amerika Serikat.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> January 10, 2024 </span>
-                                <span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-                                <span><i class="far fa-folder"></i> <a href="#">Lifestyle</a>, <a href="#">Design</a> </span>
-                                <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-                                <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                @foreach ($list_event as $key => $val)
+                    <article class="post post-medium">
+                        <div class="row mb-3">
+                            <div class="col-lg-5">
+                                <div class="post-image">
+                                    @php
+                                        $images = array_filter(explode(',', $val->tre_image ?? ''));
+                                    @endphp
 
-                <article class="post post-medium">
-                    <div class="row mb-3">
-                        <div class="col-lg-5">
-                            <div class="post-image">
-                                <a href="blog-post.html">
-                                    <img src="{{ asset('assets/landing-page/img/blog/medium/blog-11.jpg') }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="post-content">
-                                <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2">
-                                    <a href="">Pameran di pasar global pada agenda MUSIAD</a>
-                                </h2>
-                                <p class="mb-0">
-                                    Pameran di pasar global pada agenda MUSIAD (Mütakil Sanayici ve Adamlar Dernei) Expo ke-16. Dibuka oleh Presiden Turki Recep Tayyip Erdogan, Kopi Puntang Wangi dapat dikenal oleh para pengusaha Turki.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> January 10, 2024 </span>
-                                <span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-                                <span><i class="far fa-folder"></i> <a href="#">Lifestyle</a>, <a href="#">Design</a> </span>
-                                <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-                                <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                                    <div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 4000, 'margin': 10, 'animateIn': 'slideInDown', 'animateOut': 'slideOutDown'}">
 
-                <article class="post post-medium">
-                    <div class="row mb-3">
-                        <div class="col-lg-5">
-                            <div class="post-image">
-                                <a href="blog-post.html">
-                                    <img src="{{ asset('assets/landing-page/img/blog/medium/blog-11.jpg') }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
-                                </a>
+                                        @forelse($images as $img)
+                                            <div>
+                                                <img alt="" class="img-fluid rounded" src="{{ asset('assets/img/event/'.$val->tre_code.'/'.$img) }}">
+                                            </div>
+                                        @empty
+                                            <div>
+                                                <img alt="" class="img-fluid rounded" src="{{ asset('assets/landing-page/img/blog/medium/blog-11.jpg') }}">
+                                            </div>
+                                            <div>
+                                                <img alt="" class="img-fluid rounded" src="{{ asset('assets/landing-page/img/blog/medium/blog-11.jpg') }}">
+                                            </div>
+                                        @endforelse
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="post-content">
+                                    <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2">
+                                        <a href="{{ route('getevent', ['id' => Hashids::encode($val->tre_id)]) }}">{{ $val->tre_title }}</a>
+                                    </h2>
+                                    <p class="mb-0">
+                                        {{ \Illuminate\Support\Str::limit(strip_tags($val->tre_content), 400, '... ...') }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="post-content">
-                                <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2">
-                                    <a href="">Kopi Puntang Wangi di panggung Internasional</a>
-                                </h2>
-                                <p class="mb-0">
-                                    Kopi Puntang Wangi di panggung Internasional melalui ajang bergengsi di benua Alger, Aljazair. Perhelatan diselenggarakan pada tanggal 4 – 5 Desember 2024 oleh Kedutaan Besar Republik Indonesia (KBRI) dengan tema “Indonesia Spice Up the World 2024”.
-                                </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="post-meta">
+                                    <span>
+                                        <i class="far fa-calendar-alt"></i> 
+                                        {{ \Carbon\Carbon::parse($val->tre_created_date)->translatedFormat('l, d F Y') }}
+                                    </span>
+                                    <span><i class="far fa-user"></i> By <a href="#">{{ $val->created_by_name }}</a> </span>
+                                    {{-- <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span> --}}
+                                    <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0">
+                                        <a href="{{ route('getevent', ['id' => Hashids::encode($val->tre_id)]) }}" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i> January 10, 2024 </span>
-                                <span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
-                                <span><i class="far fa-folder"></i> <a href="#">Lifestyle</a>, <a href="#">Design</a> </span>
-                                <span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
-                                <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                    </article>
+                @endforeach
 
                 <ul class="pagination float-end">
                     <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>

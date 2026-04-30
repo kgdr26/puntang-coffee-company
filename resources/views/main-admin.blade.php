@@ -13,6 +13,11 @@
         <meta name="author" content="#">
         <!-- Favicon icon -->
         <link rel="icon" href="https://demo.dashboardpack.com/adminty-html/assets/images/favicon.ico" type="image/x-icon">
+
+        @foreach($css as $src)
+            <link rel="stylesheet" type="text/css" href="{{ $src }}">
+        @endforeach
+
         <!-- Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -30,6 +35,12 @@
         <!-- Style.css -->
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/main-admin/css/theme/style.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/main-admin/css/jquery.mCustomScrollbar.css') }}">
+
+        <style>
+            .ck-editor__editable {
+                min-height: 50rem;
+            }
+        </style>
     </head>
 
     <body>

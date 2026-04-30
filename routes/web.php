@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Administrator\AuthController;
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Administrator\AcvEventCOntroller;
+use App\Http\Controllers\Administrator\AcvCSRController;
 use App\Http\Controllers\Administrator\GeneralSettingController;
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\HomeController;
@@ -20,6 +22,9 @@ Route::get('/ourproduct', [ProductController::class, 'index'])->name('ourproduct
 Route::get('/processingproduct', [ProductController::class, 'proccesing'])->name('processingproduct');
 
 Route::get('/event', [ActivityController::class, 'index'])->name('event');
+Route::match(['get', 'post'], '/getevent', [ActivityController::class, 'getEvent'])->name('getevent');
+
+
 Route::get('/csr', [ActivityController::class, 'csr'])->name('csr');
 Route::get('/program', [ActivityController::class, 'program'])->name('program');
 
@@ -43,6 +48,12 @@ Route::prefix('administrator')->group(function(){
     Route::middleware('admin')->group(function(){
 
         Route::get('/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
+
+        Route::get('/mngevent',[AcvEventCOntroller::class,'index'])->name('admin.mngevent');
+        Route::match(['get', 'post'], '/formevent', [AcvEventCOntroller::class, 'form'])->name('admin.formevent');
+
+        Route::get('/admin.mngcsr',[AcvCSRController::class,'index'])->name('admin.mngcsr');
+        Route::match(['get', 'post'], '/formcsr', [AcvCSRController::class, 'form'])->name('admin.formcsr');
 
         Route::get('/generalsetting',[GeneralSettingController::class,'index'])->name('admin.generalsetting');
 

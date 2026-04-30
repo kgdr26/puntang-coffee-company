@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Vinkla\Hashids\Facades\Hashids;
 
 class ActivityController extends Controller
 {
@@ -21,7 +23,46 @@ class ActivityController extends Controller
             
         ];
 
+        $data['list_event'] = DB::table('trx_event as e')
+                                ->select(
+                                    'e.*', 
+                                    'u.name as created_by_name'
+                                )
+                                ->join('users as u', 'e.tre_created_by', '=', 'u.id')
+                                ->orderBy('e.tre_id', 'desc')
+                                ->get();
+
         return view('Landing.activity.event', $data);
+    }
+
+    public function getEvent(Request $request)
+    {
+
+        $decoded = Hashids::decode($request->id);
+
+        $tre_id = $decoded[0] ?? 0;
+
+        // include css yang di perlukan
+        $data['css'] = [
+            
+        ];
+
+        // include js yang di perlukan
+        $data['js'] = [
+            
+        ];
+
+        $data['arr'] = DB::table('trx_event as e')
+                                ->select(
+                                    'e.*', 
+                                    'u.name as created_by_name'
+                                )
+                                ->join('users as u', 'e.tre_created_by', '=', 'u.id')
+                                ->where('e.tre_id', $tre_id)
+                                ->orderBy('e.tre_id', 'desc')
+                                ->first();
+
+        return view('Landing.activity.detailevent', $data);
     }
 
     public function csr()

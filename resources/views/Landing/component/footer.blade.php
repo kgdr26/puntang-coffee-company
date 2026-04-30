@@ -5,7 +5,7 @@
         </div>
         <div class="row py-5 my-4">
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <h5 class="text-3 mb-3">NEWSLETTER</h5>
+                <h5 class="text-3 mb-3">About Us</h5>
                 <p class="pe-1">
                     Lembaga Masyarakat Desa Hutan Bukit Amanah Gunung Puntang
                     LMDH Bukit Amanah Gunung Puntang, Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat
@@ -16,27 +16,7 @@
                 <div class="alert alert-danger d-none" id="newsletterError"></div>
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <h5 class="text-3 mb-3">LATEST POSTS</h5>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-2 pb-1">
-                        <a href="#">
-                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
-                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
-                        </a>
-                    </li>
-                    <li class="mb-2 pb-1">
-                        <a href="#">
-                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Ipsum dolor sit amet.</strong></p>
-                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p class="text-3 text-color-light opacity-8 mb-0"><i class="fas fa-angle-right text-color-primary"></i><strong class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
-                            <p class="text-2 mb-0">12:55 AM Dec 19th</p>
-                        </a>
-                    </li>
-                </ul>
+                <iframe style="width: 100%;height: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38972.35707924647!2d107.584532!3d-7.1148043!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e689500647eb26f%3A0xc24583d9c85bc2f9!2sSaung%20Kerja%20Kelompok%20Tani%20Hutan%20ADUH%20(KTH%202)%20LMDH%20Bukit%20Amanah!5e1!3m2!1sid!2sid!4v1777085374733!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
                 <div class="contact-details">
@@ -51,9 +31,8 @@
             <div class="col-md-6 col-lg-2">
                 <h5 class="text-3 mb-3">FOLLOW US</h5>
                 <ul class="social-icons">
+                    {{-- Ling shopee dan logo nya --}}
                     <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a></li>
-                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -71,11 +50,7 @@
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
                     <nav id="sub-menu">
-                        <ul>
-                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> FAQ's</a></li>
-                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> Sitemap</a></li>
-                            <li><i class="fas fa-angle-right"></i><a href="" class="ms-1 text-decoration-none"> Contact Us</a></li>
-                        </ul>
+                        
                     </nav>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 @section('title', 'About')
 @section('content')
 
-<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7" style="background-image: url('{{ asset('assets/img/gmb_f4.png') }}');">
+<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-4" style="background-image: url('{{ asset('assets/img/gmb_f4.png') }}');">
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-12 align-self-center p-static order-2 text-center">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GeneralSettingController extends Controller
 {
@@ -22,6 +23,9 @@ class GeneralSettingController extends Controller
             asset('assets/main-admin/plugins/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js'),
             asset('assets/main-admin/plugins/jquery-i18next/jquery-i18next.min.js'),
         ];
+
+        $data['themes_setting'] = DB::table('theme_settings')->get();
+
 
         return view('Administrator.generalsetting', $data);
 
