@@ -20,6 +20,7 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/ourproduct', [ProductController::class, 'index'])->name('ourproduct');
 Route::get('/processingproduct', [ProductController::class, 'proccesing'])->name('processingproduct');
+Route::match(['get', 'post'], '/getajaxdetailprod', [ProductController::class, 'getajaxdetailprod'])->name('getajaxdetailprod');
 
 Route::get('/event', [ActivityController::class, 'index'])->name('event');
 Route::match(['get', 'post'], '/getevent', [ActivityController::class, 'getEvent'])->name('getevent');

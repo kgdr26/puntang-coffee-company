@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Vinkla\Hashids\Facades\Hashids;
 
 class HomeController extends Controller
 {
@@ -21,6 +23,9 @@ class HomeController extends Controller
         $data['js'] = [
             
         ];
+
+        $data['list_content'] = DB::table('trx_home')->where('trh_status', 1)->get();
+        $data['list_slide'] = DB::table('trx_home_slide')->get();
 
         return view('Landing.home', $data);
     }

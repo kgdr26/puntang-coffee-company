@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Vinkla\Hashids\Facades\Hashids;
 
 class AboutController extends Controller
 {
@@ -20,6 +22,13 @@ class AboutController extends Controller
         $data['js'] = [
             
         ];
+
+        $data['get_header'] = DB::table('mst_header')->where('msh_id', 1)->first();
+        $data['get_sec_one'] = DB::table('trx_about')->where('tas_id', 1)->first();
+        $data['get_sec_two'] = DB::table('trx_about')->where('tas_id', 2)->first();
+        $queryimage = DB::table('trx_about')->where('tas_id', 3)->first();
+        $loop_img = explode(',',$queryimage->tas_image);
+        $data['get_sec_three'] = $loop_img;
 
         return view('Landing.about', $data);
     }

@@ -95,5 +95,46 @@
 		<!-- Theme Initialization Files -->
 		<script src="{{ asset('assets/landing-page/js/theme.init.js') }}"></script>
 		<script src="{{ asset('assets/landing-page/js/examples/examples.portfolio.js') }}"></script>
+
+		<script>
+			$('[data-name="show_desc"]').on('click', function() {
+
+				let trpid = $(this).data('id');
+
+				shoddescprod(trpid);
+			});
+
+			$('#revolutionSliderCarousel').on('revolution.slide.onchange', function (e, data) {
+    
+				let currentSlide = data.slideIndex; // index aktif
+				let currentLi = $(data.currentslide); // element <li>
+
+				let trpid = currentLi.data('id');
+
+				// console.log("Slide aktif ID:", trpid);
+				shoddescprod(trpid);
+			});
+
+			function shoddescprod(trpid){
+				
+				$.ajax({
+					url: '/getajaxdetailprod', // route Laravel kamu
+					type: 'GET',
+					data: {
+						id: trpid
+					},
+					success: function(res){
+						console.log(res);
+
+						// contoh tampilkan ke div
+						$('#nameprod').text(res.trp_name);
+						$('#desprod').text(res.trp_description);
+					},
+					error: function(xhr){
+						console.log("Error:", xhr.resText);
+					}
+				});
+			}
+		</script>
     </body>
 </html>

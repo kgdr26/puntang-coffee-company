@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Vinkla\Hashids\Facades\Hashids;
 
 class ProductController extends Controller
 {
@@ -21,9 +23,35 @@ class ProductController extends Controller
             
         ];
 
-        $data['listproduct'] = ['gmb_f10.png','gmb_f11.png','gmb_f12.png','gmb_f13.png','gmb_f14.png','gmb_f15.png'];
+        $data['listproduct'] = DB::table('trx_product')->where('trp_status', 1)->get();
+        $data['list_package'] = DB::table('trx_package_product')->where('tpp_status', 1)->get();
 
         return view('Landing.product.our', $data);
+    }
+
+    public function getajaxdetailprod(Request $request)
+    {
+        // validasi biar aman
+        $request->validate([
+            'id' => 'required'
+        ]);
+
+        $product = DB::table('trx_product')->where('trp_id',  $request->id)->first();
+
+        if(!$product){
+            return response()->json([
+                'status' => false,
+                'message' => 'Product tidak ditemukan'
+            ], 404);
+        }
+
+        return response()->json([
+            'status' => true,
+            'trp_id' => $product->trp_id,
+            'trp_name' => $product->trp_name,
+            'trp_description' => $product->trp_description,
+            'trp_image' => $product->trp_image
+        ]);
     }
 
     public function proccesing()
@@ -38,7 +66,8 @@ class ProductController extends Controller
             
         ];
 
-        $data['listproduct'] = ['gmb_f10.png','gmb_f11.png','gmb_f12.png','gmb_f13.png','gmb_f14.png','gmb_f15.png'];
+        $data['get_header'] = DB::table('mst_header')->where('msh_id', 2)->first();
+        $data['get_content'] = DB::table('trx_prod_proccess')->where('tpr_id', 1)->first();
 
         return view('Landing.product.processing', $data);
     }

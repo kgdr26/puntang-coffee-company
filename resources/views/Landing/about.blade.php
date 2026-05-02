@@ -2,12 +2,12 @@
 @section('title', 'About')
 @section('content')
 
-<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-4" style="background-image: url('{{ asset('assets/img/gmb_f4.png') }}');">
+<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-4" style="background-image: url('{{ asset('assets/img/header/'.$get_header->msh_image) }}');">
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-12 align-self-center p-static order-2 text-center">
-                <h1 class="text-9 font-weight-bold">About Us</h1>
-                <span class="sub-title">The perfect choice for your next project</span>
+                <h1 class="text-9 font-weight-bold">{{ $get_header->msh_title }}</h1>
+                <span class="sub-title">{{ $get_header->msh_content }}</span>
             </div>
             <div class="col-md-12 align-self-center order-1">
                 <ul class="breadcrumb breadcrumb-light d-block text-center">
@@ -19,29 +19,33 @@
     </div>
 </section>
 
-<section class="section section-default border-0 my-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="750">
+<section class="section section-default border-0 my-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="750" style="background: var(--bg-warm);">
     <div class="container py-4">
 
         <div class="row align-items-center">
             <div class="col-md-6 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1000">
                 <div class="owl-carousel owl-theme nav-inside mb-0" data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 6000, 'loop': true}">
-                    <div>
-                        <img alt="" class="img-fluid" src="{{ asset('assets/img/gmb_f21.png') }}">
-                    </div>
-                    <div>
-                        <img alt="" class="img-fluid" src="{{ asset('assets/img/gmb_f24.png') }}">
-                    </div>
+                    @php
+                        $image = $get_sec_one->tas_image;
+                        $loop_img = explode(',',$image);
+                    @endphp
+
+                    @foreach($loop_img as $val)
+                        <div>
+                            <img alt="" class="img-fluid" src="{{ asset('assets/img/about/'.$val) }}">
+                        </div>
+                    @endforeach
+                    
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="overflow-hidden mb-2">
-                    <h2 class="text-color-dark font-weight-normal text-7 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1200"><strong class="font-weight-extra-bold">-- From Coffee Beans a Life Raises –-</strong></h2>
+                    <h2 class="text-color-dark font-weight-normal text-7 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1200">
+                        <strong class="font-weight-extra-bold">{{ $get_sec_one->tas_title }}</strong>
+                    </h2>
                 </div>
                 <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">
-                    Bermula dari aktivitas ilegal yang menjadi tumpuan hidup, Masyarakat Gunung Puntang memenuhi kebutuhan sehari-hari melalui perburuan liar, perambahan lahan hutan, penebangan pohon secara sembarangan. Tanpa memperhatikan dampak lingkungan yang ada, keberlangsungan hidup keluarga menjadi satu-satunya prioritas yang dimiliki oleh Masyarakat desa hutan tanpa kemampuan maupun rantai ekonomi yang memadai.
-                </p>
-                <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">
-                    Tahun 2017 menjadi titik awal perjalanan, ketika lingkungan terasa tidak lagi memberikan keamanan sehingga sering terjadi banjir, terganggunya ekosistem fauna hutan, dan masalah sosial yang timbul. Tanggal 26 Oktober 2017 Kementerian Lingkungan Hidup dan Kehutanan melalui Direktorat Perhutanan Sosial dan Kemitraan Lingkungan Republik Indonesia memberikan kesempatan hak kelola kemitraan kehutanan seluas 306,12 hektare kepada Masyarakat yang selanjutnya dibentuk dan dikenal sebagai Lembaga Masyarakat Desa Hutan (LMDH) Bukit Amanah Gunung Puntang.
+                    {{ $get_sec_one->tas_content }}
                 </p>
             </div>
         </div>
@@ -49,7 +53,7 @@
     </div>
 </section>
 
-<div class="container">
+{{-- <div class="container">
     <div class="row">
         <div class="col py-4">
             <hr class="solid">
@@ -105,15 +109,12 @@
 
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="container pt-5 pb-2">
     <div class="overflow-hidden mb-3">
         <p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-            Berlokasi di Gunung Puntang Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat, LMDH ini beranggotakan dengan masing-masing kelompok sekitar 40 kepala keluarga yang diketuai oleh Deni Sofian Dimyati atau yang biasa dikenal sebagai Abah Onil.
-        </p>
-        <p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-            Komitmen terhadap keberlangsungan lingkungan diaktualisasikan melalui budidaya tanaman kopi yang dilakukan dengan metode Green Farming yang merupakan pendekatan budidaya tanaman dengan mengutamakan kelestarian lingkungan, keberlanjutan ekosistem, dan kesehatan manusia dengan meminimalkan penggunaan bahan kimia sintetis. Pemanfaatan pupuk organik yang diperoleh melalui kulit biji ceri kopi dan feses hewan ternak diolah untuk menjadi bahan fertilisasi.
+            {{ $get_sec_two->tas_content }}
         </p>
     </div>
     <div class="row">
@@ -122,67 +123,15 @@
             <div class="my-4 lightbox appear-animation" data-appear-animation="fadeInUpShorter" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
                 <div class="owl-carousel owl-theme pb-3" data-plugin-options="{'items': 4, 'margin': 35, 'loop': false}">
 
-                    @for($i=1;$i<=10;$i++)
+                    @foreach($get_sec_three as $vg)
                         <div class="portfolio-item">
                             <span class="thumb-info thumb-info-lighten thumb-info-no-borders thumb-info-bottom-info thumb-info-centered-icons border-radius-0">
                                 <span class="thumb-info-wrapper border-radius-0">
-                                    <img src="{{ asset('assets/img/gmb_f21.png') }}" class="img-fluid border-radius-0" alt="">
-                                    <span class="thumb-info-title">
-                                        <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">OUR DATA</span>
-                                        <span class="thumb-info-type">Brand</span>
-                                    </span>
-                                    <span class="thumb-info-action">
-                                        <a href="portfolio-single-wide-slider.html">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-primary"><i class="fas fa-link"></i></span>
-                                        </a>
-                                        <a href="{{ asset('assets/img/gmb_f21.png') }}" class="lightbox-portfolio">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-search text-dark"></i></span>
-                                        </a>
-                                    </span>
+                                    <img src="{{ asset('assets/img/about/'.$vg) }}" class="img-fluid border-radius-0" alt="">
                                 </span>
                             </span>
                         </div>
-
-                        <div class="portfolio-item">
-                            <span class="thumb-info thumb-info-lighten thumb-info-no-borders thumb-info-bottom-info thumb-info-centered-icons border-radius-0">
-                                <span class="thumb-info-wrapper border-radius-0">
-                                    <img src="{{ asset('assets/img/gmb_f22.png') }}" class="img-fluid border-radius-0" alt="">
-                                    <span class="thumb-info-title">
-                                        <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">OUR DATA</span>
-                                        <span class="thumb-info-type">Brand</span>
-                                    </span>
-                                    <span class="thumb-info-action">
-                                        <a href="portfolio-single-wide-slider.html">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-primary"><i class="fas fa-link"></i></span>
-                                        </a>
-                                        <a href="{{ asset('assets/img/gmb_f22.png') }}" class="lightbox-portfolio">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-search text-dark"></i></span>
-                                        </a>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-
-                        <div class="portfolio-item">
-                            <span class="thumb-info thumb-info-lighten thumb-info-no-borders thumb-info-bottom-info thumb-info-centered-icons border-radius-0">
-                                <span class="thumb-info-wrapper border-radius-0">
-                                    <img src="{{ asset('assets/img/gmb_f23.png') }}" class="img-fluid border-radius-0" alt="">
-                                    <span class="thumb-info-title">
-                                        <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">OUR DATA</span>
-                                        <span class="thumb-info-type">Brand</span>
-                                    </span>
-                                    <span class="thumb-info-action">
-                                        <a href="portfolio-single-wide-slider.html">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-primary"><i class="fas fa-link"></i></span>
-                                        </a>
-                                        <a href="{{ asset('assets/img/gmb_f23.png') }}" class="lightbox-portfolio">
-                                            <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-search text-dark"></i></span>
-                                        </a>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    @endfor
+                    @endforeach
 
                 </div>
             </div>

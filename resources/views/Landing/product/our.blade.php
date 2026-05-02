@@ -56,8 +56,8 @@
         <ul>
             @foreach ($listproduct as $key => $item)
                 
-                <li data-index="rs-{{ $key+1 }}" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="" data-description="">
-                    <img src="{{ asset('assets/img/'.$item) }}" alt="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                <li data-index="rs-{{ $key+1 }}" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="100" data-rotate="0" data-saveperformance="off" data-title="" data-description="" data-name="show_desc" data-id="{{ $item->trp_id }}">
+                    <img src="{{ asset('assets/img/product/'.$item->trp_image) }}" alt="" data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                 </li>
 
             @endforeach
@@ -71,11 +71,13 @@
         <div class="col-md-7 mb-4 mb-md-0">
 
             <div class="overflow-hidden mb-2">
-                <h2 class="text-color-dark font-weight-normal text-5 mb-0 appear-animation" data-appear-animation="maskUp">Product <strong class="font-weight-extra-bold">Puntang Coffee</strong></h2>
+                <h2 class="text-color-dark font-weight-normal text-5 mb-0 appear-animation" data-appear-animation="maskUp">
+                    <strong class="font-weight-extra-bold" id="nameprod">-</strong>
+                </h2>
             </div>
 
-            <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.
+            <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" id="desprod">
+                -
             </p>
 
             <hr class="solid my-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
@@ -86,6 +88,28 @@
             <ul class="list list-icons list-primary list-borders text-2">
                 <li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Shopee URL:</strong> <a href="https://shopee.co.id/puntangwangicoffee" target="_blank" class="text-dark">https://shopee.co.id/puntangwangicoffee</a></li>
             </ul>
+
+             <div class="row">
+                <div class="col">
+
+                    <div class="my-4 lightbox appear-animation" data-appear-animation="fadeInUpShorter" data-plugin-options="{'delegate': 'a.lightbox-portfolio', 'type': 'image', 'gallery': {'enabled': true}}">
+                        <div class="owl-carousel owl-theme pb-3" data-plugin-options="{'items': 4, 'margin': 35, 'loop': false}">
+
+                            @foreach($list_package as $kg => $vg)
+                                <div class="portfolio-item">
+                                    <span class="thumb-info thumb-info-lighten thumb-info-no-borders thumb-info-bottom-info thumb-info-centered-icons border-radius-0">
+                                        <span class="thumb-info-wrapper border-radius-0">
+                                            <img src="{{ asset('assets/img/package/'.$vg->tpp_image) }}" class="img-fluid border-radius-0" alt="">
+                                        </span>
+                                    </span>
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 

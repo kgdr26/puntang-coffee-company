@@ -32,7 +32,7 @@
                 <h5 class="text-3 mb-3">FOLLOW US</h5>
                 <ul class="social-icons">
                     {{-- Ling shopee dan logo nya --}}
-                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-facebook"><a href="https://shopee.co.id/puntangwangicoffee" target="_blank" title="Facebook"><i class="fab fa-shopify"></i></a></li>
                 </ul>
             </div>
         </div>
