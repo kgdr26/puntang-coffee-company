@@ -80,11 +80,11 @@
                                                 CONTACT US
                                             </a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a class="dropdown-item" href="{{ route('admin.login') }}">
                                                 LOGIN
                                             </a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </nav>
                             </div>
