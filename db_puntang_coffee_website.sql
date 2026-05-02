@@ -125,6 +125,24 @@ insert  into `migrations`(`id`,`migration`,`batch`) values
 (17,'2026_03_06_223959_create_mst_template_settings_table',3),
 (18,'2026_03_13_225333_create_mst_role_permissions_table',4);
 
+/*Table structure for table `mst_header` */
+
+DROP TABLE IF EXISTS `mst_header`;
+
+CREATE TABLE `mst_header` (
+  `msh_id` int(11) NOT NULL AUTO_INCREMENT,
+  `msh_title` varchar(255) DEFAULT NULL,
+  `msh_content` text DEFAULT NULL,
+  `msh_image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`msh_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `mst_header` */
+
+insert  into `mst_header`(`msh_id`,`msh_title`,`msh_content`,`msh_image`) values 
+(1,'About Us','The perfect choice for your next project','gmb_f4.png'),
+(2,'Processing Methods','The perfect choice for your next project','gmb_f9.png');
+
 /*Table structure for table `mst_menus` */
 
 DROP TABLE IF EXISTS `mst_menus`;
@@ -386,12 +404,255 @@ CREATE TABLE `sessions` (
 /*Data for the table `sessions` */
 
 insert  into `sessions`(`id`,`user_id`,`ip_address`,`user_agent`,`payload`,`last_activity`) values 
-('85ZgrdPluelEq9hiKxuZAc3okL4MHd1z7Bco5T2i',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiak1GMjRyNU11c1hLeTRhbk92NnpnNG92ZWRtYnpuV3pKdmd1RGJCUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyIjtzOjU6InJvdXRlIjtzOjEwOiJob21lLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1776483461),
-('DUENI7mENCYQVaScVTSyBEe5ccJGHGjUq9MstElb',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoicW9Ed1VzOHFuOVRCZXF2RVpqQzRIenpFYnc3RTF6N2NlYTBmYTRqeiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyIjtzOjU6InJvdXRlIjtzOjEwOiJob21lLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1775748304),
-('gDJM5WqjWodfLl8ZCZSRyOpJRfDqk3iAfO5KadHH',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoidTZRdXVzSjdHeVZMVDMwbHRkMUMwSFB1bWFTckkycGg0cE5yR2hrNyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDk6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyL2NvbnRhY3QiO3M6NToicm91dGUiO3M6MTM6ImNvbnRhY3QuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1775760834),
-('HuSflKPDB8gPBtpmL8V7Kz26t7LXZkHQRekKJunt',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiYVM2d2FxcGF5OTVnZzJRZTB5SmZWajJaelFCVmZkV2ZwRmRtMjc2RSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyL2FjdGl2aXR5LW5ld3MiO3M6NToicm91dGUiO3M6MTQ6ImFjdGl2aXR5LmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1776559382),
-('KU9oRUXtUSeZgV6JSBPpaWhRpHoG5ciAIFUkoyrP',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiRVlXcmNIRW94RFpXVzNESVJZemJhOG42b3UyazJZSUZZcnprZTdQcCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyIjtzOjU6InJvdXRlIjtzOjEwOiJob21lLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1776380898),
-('Tg3vHRcJsXyTy4imEu2wOS8UmQiMjzT5zyYShf6p',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiM1RRWTFsNHllMDdsS0lMeWtSdW9Fd21KTk1ONVZHdk82dFJvQW1qTyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDk6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyL3Byb2R1Y3QiO3M6NToicm91dGUiO3M6MTM6InByb2R1Y3QuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1776532061);
+('cJ584FjpVezMsP1AuZ85HUU6skRzhNeZwMIOzYgz',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiRGZNNTVDUXZsdzRVcU1ZUXU0eEtId25lbWdJT0JEeWJVbXhxNmpKMyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTk6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyL3Byb2Nlc3Npbmdwcm9kdWN0IjtzOjU6InJvdXRlIjtzOjE3OiJwcm9jZXNzaW5ncHJvZHVjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=',1777695481),
+('ekrXtxw1Dv163sNcAYfDrY38FlKpOoe45FXGY7y5',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiQnUzTHFValhBUGFCcFd5UGtmVFpBcXNIeXp6TmtKczhRaVhUNEo4UyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDc6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyL2Fib3V0IjtzOjU6InJvdXRlIjtzOjU6ImFib3V0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==',1777622151),
+('ybJeBwVrK6J2OY695gN9c81rvT0ZXhmShlHIUrve',NULL,'172.18.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiT2xTMWxtY3F0bEtYb3hESWVJeW5wQWdkRnJoV0VMTVBGSDdib1prTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDE6Imh0dHBzOi8vcHVudGFuZy1jb2ZmZWUtY29tcGFueS5sb2NhbC1rZ2RyIjtzOjU6InJvdXRlIjtzOjQ6ImhvbWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1777678898);
+
+/*Table structure for table `theme_settings` */
+
+DROP TABLE IF EXISTS `theme_settings`;
+
+CREATE TABLE `theme_settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `value` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `theme_settings` */
+
+insert  into `theme_settings`(`id`,`name`,`value`) values 
+(1,'border-radius','4px'),
+(2,'border-radius2x','8px'),
+(3,'default','#777'),
+(4,'primary','#6F4E37'),
+(5,'primary-100','#5d422f'),
+(6,'primary-200','#533b2a'),
+(7,'primary-300','#4a3425'),
+(8,'primary--100','#816048'),
+(9,'primary--200','#8b6a52'),
+(10,'primary--300','#96745c'),
+(11,'primary-rgba-10','rgba(111, 78, 55, 0.1)'),
+(12,'primary-rgba-20','rgba(111, 78, 55, 0.2)'),
+(13,'primary-rgba-30','rgba(111, 78, 55, 0.3)'),
+(14,'primary-rgba-40','rgba(111, 78, 55, 0.4)'),
+(15,'primary-rgba-50','rgba(111, 78, 55, 0.5)'),
+(16,'secondary','#C68642'),
+(17,'secondary-100','#b3773a'),
+(18,'secondary-200','#a86f36'),
+(19,'secondary-300','#9c6731'),
+(20,'secondary--100','#d1975a'),
+(21,'secondary--200','#d9a168'),
+(22,'secondary--300','#e0ab75'),
+(23,'tertiary','#F3E9DC'),
+(24,'tertiary-100','#e4d8c8'),
+(25,'tertiary-200','#dcd0c0'),
+(26,'tertiary-300','#d4c8b8'),
+(27,'tertiary--100','#f6ede2'),
+(28,'tertiary--200','#f8f1e7'),
+(29,'tertiary--300','#fbf5ec'),
+(30,'quaternary','#3E2C23'),
+(31,'quaternary-100','#34251d'),
+(32,'quaternary-200','#2e2119'),
+(33,'quaternary-300','#281c16'),
+(34,'quaternary--100','#4a362b'),
+(35,'quaternary--200','#523c30'),
+(36,'quaternary--300','#5a4336'),
+(37,'dark','#2B1D17'),
+(38,'dark-100','#231813'),
+(39,'dark-200','#1c1410'),
+(40,'dark-300','#150f0c'),
+(41,'light','#FFF8F0'),
+(42,'light-100','#f5ede5'),
+(43,'light-200','#efe6dd'),
+(44,'light-300','#e8dfd6'),
+(45,'primary-inverse','#FFF'),
+(46,'secondary-inverse','#FFF'),
+(47,'tertiary-inverse','#FFF'),
+(48,'quaternary-inverse','#FFF'),
+(49,'dark-inverse','#FFF'),
+(50,'light-inverse','#777'),
+(51,'grey','#969696'),
+(52,'grey-100','#f4f4f4'),
+(53,'grey-200','#eaeaea'),
+(54,'grey-300','#e5e5e5'),
+(55,'grey-400','#e0e0e0'),
+(56,'grey-500','#dbdbdb'),
+(57,'grey-600','#cecece'),
+(58,'grey-700','#c1c1c1'),
+(59,'grey-800','#a8a8a8'),
+(60,'grey-900','#8e8e8e'),
+(61,'grey-1000','#757575'),
+(62,'header-bg-color','#2B1D17'),
+(63,'bg-warm','#F3E4C9');
+
+/*Table structure for table `trx_about` */
+
+DROP TABLE IF EXISTS `trx_about`;
+
+CREATE TABLE `trx_about` (
+  `tas_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tas_title` varchar(255) DEFAULT NULL,
+  `tas_content` mediumtext DEFAULT NULL,
+  `tas_image` text DEFAULT NULL,
+  PRIMARY KEY (`tas_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_about` */
+
+insert  into `trx_about`(`tas_id`,`tas_title`,`tas_content`,`tas_image`) values 
+(1,'-- From Coffee Beans a Life Raises –-','Bermula dari aktivitas ilegal yang menjadi tumpuan hidup, Masyarakat Gunung Puntang memenuhi kebutuhan sehari-hari melalui perburuan liar, perambahan lahan hutan, penebangan pohon secara sembarangan. Tanpa memperhatikan dampak lingkungan yang ada, keberlangsungan hidup keluarga menjadi satu-satunya prioritas yang dimiliki oleh Masyarakat desa hutan tanpa kemampuan maupun rantai ekonomi yang memadai.\r\n\r\nTahun 2017 menjadi titik awal perjalanan, ketika lingkungan terasa tidak lagi memberikan keamanan sehingga sering terjadi banjir, terganggunya ekosistem fauna hutan, dan masalah sosial yang timbul. Tanggal 26 Oktober 2017 Kementerian Lingkungan Hidup dan Kehutanan melalui Direktorat Perhutanan Sosial dan Kemitraan Lingkungan Republik Indonesia memberikan kesempatan hak kelola kemitraan kehutanan seluas 306,12 hektare kepada Masyarakat yang selanjutnya dibentuk dan dikenal sebagai Lembaga Masyarakat Desa Hutan (LMDH) Bukit Amanah Gunung Puntang.','gmb_f21.png,gmb_f24.png'),
+(2,NULL,'Berlokasi di Gunung Puntang Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat, LMDH ini beranggotakan dengan masing-masing kelompok sekitar 40 kepala keluarga yang diketuai oleh Deni Sofian Dimyati atau yang biasa dikenal sebagai Abah Onil.\r\n\r\nKomitmen terhadap keberlangsungan lingkungan diaktualisasikan melalui budidaya tanaman kopi yang dilakukan dengan metode Green Farming yang merupakan pendekatan budidaya tanaman dengan mengutamakan kelestarian lingkungan, keberlanjutan ekosistem, dan kesehatan manusia dengan meminimalkan penggunaan bahan kimia sintetis. Pemanfaatan pupuk organik yang diperoleh melalui kulit biji ceri kopi dan feses hewan ternak diolah untuk menjadi bahan fertilisasi.',NULL),
+(3,NULL,NULL,'gmb_f21.png,gmb_f24.png');
+
+/*Table structure for table `trx_csr` */
+
+DROP TABLE IF EXISTS `trx_csr`;
+
+CREATE TABLE `trx_csr` (
+  `trc_id` int(11) NOT NULL AUTO_INCREMENT,
+  `trc_title` varchar(255) DEFAULT NULL,
+  `trc_content` mediumtext DEFAULT NULL,
+  `trc_image` text DEFAULT NULL,
+  `trc_thems_image` int(11) DEFAULT NULL,
+  `trc_created_date` datetime DEFAULT NULL,
+  `trc_created_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`trc_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_csr` */
+
+/*Table structure for table `trx_event` */
+
+DROP TABLE IF EXISTS `trx_event`;
+
+CREATE TABLE `trx_event` (
+  `tre_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tre_code` varchar(255) DEFAULT NULL,
+  `tre_title` varchar(255) DEFAULT NULL,
+  `tre_content` mediumtext DEFAULT NULL,
+  `tre_image` text DEFAULT NULL,
+  `tre_date_event` date DEFAULT NULL,
+  `tre_created_date` datetime DEFAULT NULL,
+  `tre_created_by` int(11) DEFAULT NULL,
+  `tre_updated_date` datetime DEFAULT NULL,
+  `tre_updated_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`tre_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_event` */
+
+insert  into `trx_event`(`tre_id`,`tre_code`,`tre_title`,`tre_content`,`tre_image`,`tre_date_event`,`tre_created_date`,`tre_created_by`,`tre_updated_date`,`tre_updated_by`) values 
+(1,'E000001','Atlanta, 2016','What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n\r\n\r\nWhere does it come from?\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n\r\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\r\n\r\nWhere can I get some?\r\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.','e1.png,e2.png','2026-04-29','2026-04-29 08:20:30',1,NULL,NULL);
+
+/*Table structure for table `trx_home` */
+
+DROP TABLE IF EXISTS `trx_home`;
+
+CREATE TABLE `trx_home` (
+  `trh_id` int(11) NOT NULL AUTO_INCREMENT,
+  `trh_code` varchar(255) DEFAULT NULL,
+  `trh_title` varchar(255) DEFAULT NULL,
+  `trh_content` mediumtext DEFAULT NULL,
+  `trh_type_image` int(11) DEFAULT NULL,
+  `trh_image` text DEFAULT NULL,
+  `trh_status` int(11) DEFAULT NULL,
+  `trh_created_date` datetime DEFAULT NULL,
+  `trh_created_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`trh_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_home` */
+
+insert  into `trx_home`(`trh_id`,`trh_code`,`trh_title`,`trh_content`,`trh_type_image`,`trh_image`,`trh_status`,`trh_created_date`,`trh_created_by`) values 
+(1,'H000001','Highlight of products knowledge','From Highland Soil to Your Cup Berasal dari dataran tinggi Gunung Puntang , setiap biji kopi Puntang Wangi ditanam pada ketinggian ideal antara 1250 – 1500 mpdl. Iklim pegunungan yang sejuk, tanah yang kaya mineral, dan sentuhan langsung para petani kopi lokal dalam merawat tanaman kopi tanpa bahan kimia memberikan karakter rasa yang unik, kompleks, dan autentik.',1,'gmb_f2.png,gmb_f3.png,gmb_f7.png',1,'2026-04-30 23:55:09',1),
+(2,'H000002','International proof','Kopi Puntang dengan jenis Yellow Bourbone berhasil meraih gelar juara dunia dalam ajang Specialty Coffee Association of America Expo di Atlanta, Amerika Serikat, pada April 2016. Kualitas kopi Puntang Wangi menjadi komitmen utama kami dalam menciptakan profil rasa seimbang yang terus menerus kami upayakan untuk dapat dikenal di pasar internasional melalui beberapa pameran yang telah kami laksanakan seperti di negara Algeria, Qatar, dan Turkey.',2,'gmb_f8.png,gmb_f19.png',1,'2026-04-30 23:55:33',1);
+
+/*Table structure for table `trx_home_slide` */
+
+DROP TABLE IF EXISTS `trx_home_slide`;
+
+CREATE TABLE `trx_home_slide` (
+  `ths_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ths_image` varchar(255) DEFAULT NULL,
+  `ths_text_1` text DEFAULT NULL,
+  `ths_text_2` text DEFAULT NULL,
+  `ths_text_3` text DEFAULT NULL,
+  `ths_created_by` int(11) DEFAULT NULL,
+  `ths_created_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`ths_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_home_slide` */
+
+insert  into `trx_home_slide`(`ths_id`,`ths_image`,`ths_text_1`,`ths_text_2`,`ths_text_3`,`ths_created_by`,`ths_created_date`) values 
+(1,'gmb_f1.png','DO YOU NEED A NEW','PUNTANG COFFEE','Check out our options and features',1,'2026-05-01 14:19:01'),
+(2,'gmb_f3.png','WE WORK HARD AND PORTO HAS','PUNTANG COFFEE','Trusted by over <strong class=\"text-color-light\">30,000</strong> satisfied users, Porto is a huge success in the one of largest world\'s MarketPlace.',1,'2026-05-01 14:20:10'),
+(3,'gmb_f8.png','WE CREATE DESIGNS, WE ARE','PUNTANG COFFEE','The best choice for your new website',NULL,NULL);
+
+/*Table structure for table `trx_package_product` */
+
+DROP TABLE IF EXISTS `trx_package_product`;
+
+CREATE TABLE `trx_package_product` (
+  `tpp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tpp_name` varchar(255) DEFAULT NULL,
+  `tpp_description` mediumtext DEFAULT NULL,
+  `tpp_image` varchar(255) DEFAULT NULL,
+  `tpp_status` int(11) DEFAULT NULL,
+  `tpp_created_by` int(11) DEFAULT NULL,
+  `tpp_created_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`tpp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_package_product` */
+
+insert  into `trx_package_product`(`tpp_id`,`tpp_name`,`tpp_description`,`tpp_image`,`tpp_status`,`tpp_created_by`,`tpp_created_date`) values 
+(1,NULL,NULL,'gmb_f9.png',1,1,'2026-05-02 10:27:40'),
+(2,NULL,NULL,'gmb_f18.png',1,1,'2026-05-02 10:27:42');
+
+/*Table structure for table `trx_prod_proccess` */
+
+DROP TABLE IF EXISTS `trx_prod_proccess`;
+
+CREATE TABLE `trx_prod_proccess` (
+  `tpr_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tpr_content` mediumtext DEFAULT NULL,
+  `tpr_image` text DEFAULT NULL,
+  `tpr_list_methode` mediumtext DEFAULT NULL,
+  PRIMARY KEY (`tpr_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_prod_proccess` */
+
+insert  into `trx_prod_proccess`(`tpr_id`,`tpr_content`,`tpr_image`,`tpr_list_methode`) values 
+(1,'Kopi Puntang Wangi adalah produk yang dihasilkan dari dataran tinggi Gunung Puntang yang berada di 1,250 – 1,500 meter di atas permukaan laut (mpdl). Berbagai metode pengolahan buah kopi menciptakan beraneka ragam cita rasa.','gmb_f2.png,gmb_f6.png,gmb_f8.png,gmb_f17.png','[\r\n  {\r\n    \"title\": \"Honey Process\",\r\n    \"desc\": \"Buah kopi dilakukan pengupasan kulit dengan sedikit sisa daging buahnya, menghasilkan keseimbangan rasa manis buah-buahan dan keasaman yang lembut, serta aroma yang kompleks.\"\r\n  },\r\n  {\r\n    \"title\": \"Natural Process\",\r\n    \"desc\": \"Buah kopi dikeringkan secara utuh bersama kulitnya sehingga menciptakan rasa buah yang kaya dan manis, seperti cokelat hitam, buah beri, dan sedikit rasa kayu manis.\"\r\n  },\r\n  {\r\n    \"title\": \"Washed Process\",\r\n    \"desc\": \"Metode yang membutuhkan proses pencucian biji kopi dan pembersihan kulit dengan air sebelum pengeringan untuk menghasilkan cita rasa yang lebih bersih, asam lebih terang, dan sentuhan floral serta sitrus.\"\r\n  },\r\n  {\r\n    \"title\": \"Wine Process\",\r\n    \"desc\": \"Biji kopi melalui proses fermentasi seperti pembuatan anggur untuk menghasilkan cita rasa kompleks dan khas dengan nuansa buah-buahan matang, rempah, dan sedikit rasa manis.\"\r\n  }\r\n]');
+
+/*Table structure for table `trx_product` */
+
+DROP TABLE IF EXISTS `trx_product`;
+
+CREATE TABLE `trx_product` (
+  `trp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `trp_name` varchar(255) DEFAULT NULL,
+  `trp_description` mediumtext DEFAULT NULL,
+  `trp_image` varchar(255) DEFAULT NULL,
+  `trp_status` int(11) DEFAULT NULL,
+  `trp_created_by` int(11) DEFAULT NULL,
+  `trp_created_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`trp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
+/*Data for the table `trx_product` */
+
+insert  into `trx_product`(`trp_id`,`trp_name`,`trp_description`,`trp_image`,`trp_status`,`trp_created_by`,`trp_created_date`) values 
+(1,'PRD1','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f10.png',1,1,'2026-05-02 07:39:19'),
+(2,'PRD2','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f11.png',1,1,'2026-05-02 09:15:57'),
+(3,'PRD3','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f12.png',1,1,'2026-05-02 09:15:59'),
+(4,'PRD4','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f13.png',1,1,'2026-05-02 09:16:00'),
+(5,'PRD5','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f14.png',1,1,'2026-05-02 09:16:02'),
+(6,'PRD6','Tipe kopi Arabika & Robusta, dengan beragam jenis varietas yang memiliki notes rasa yang begitu kaya, autentik, dan aftertaste yang seimbang.','gmb_f15.png',NULL,1,'2026-05-02 09:16:04');
 
 /*Table structure for table `users` */
 
@@ -404,6 +665,7 @@ CREATE TABLE `users` (
   `role_id` int(11) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
@@ -416,10 +678,10 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`name`,`phone`,`role_id`,`email`,`email_verified_at`,`status`,`username`,`password`,`remember_token`,`created_at`,`updated_at`) values 
-(1,'Test User',NULL,NULL,'test@example.com','2026-03-06 21:53:31',NULL,NULL,'$2y$12$gz944mJ9QOXUJ.doxxzhF.WHb59C2xLzOiExfyeQ8xJoZQdkfNwhi','DHVsTrWyEu','2026-03-06 21:53:31','2026-03-06 21:53:31'),
-(2,'Super Admin','081234567890',1,'kgdr@puntangcoffee.com',NULL,1,'kgdr','$2y$12$.2WOIrYolbtlsTBTYITNo./cyWj92MkRovSKSeRN/PCtYhwWnHOBS',NULL,'2026-03-14 05:47:11',NULL),
-(3,'Admin','081234567891',2,'admin@puntangcoffee.com',NULL,1,'admin','$2y$12$KIXQnFJzVbRTP0TOE2nGceEw9H2Yg3xX9L5YF7U3U6h2sE9YxYbKa',NULL,'2026-03-14 05:47:37',NULL);
+insert  into `users`(`id`,`name`,`phone`,`role_id`,`email`,`email_verified_at`,`image`,`status`,`username`,`password`,`remember_token`,`created_at`,`updated_at`) values 
+(1,'Test User',NULL,NULL,'test@example.com','2026-03-06 21:53:31','default.jpg',NULL,NULL,'$2y$12$gz944mJ9QOXUJ.doxxzhF.WHb59C2xLzOiExfyeQ8xJoZQdkfNwhi','DHVsTrWyEu','2026-03-06 21:53:31','2026-03-06 21:53:31'),
+(2,'Super Admin','081234567890',1,'kgdr@puntangcoffee.com',NULL,'default.jpg',1,'kgdr','$2y$12$.2WOIrYolbtlsTBTYITNo./cyWj92MkRovSKSeRN/PCtYhwWnHOBS',NULL,'2026-03-14 05:47:11',NULL),
+(3,'Admin','081234567891',2,'admin@puntangcoffee.com',NULL,'default.jpg',1,'admin','$2y$12$KIXQnFJzVbRTP0TOE2nGceEw9H2Yg3xX9L5YF7U3U6h2sE9YxYbKa',NULL,'2026-03-14 05:47:37',NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

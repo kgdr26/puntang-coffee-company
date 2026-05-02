@@ -15,7 +15,7 @@
             <h2 class="font-weight-bold text-8 mt-2 mb-0">Contact Us</h2>
             <p class="mb-4">Get in touch with us</p>
 
-            <form class="contact-form" action="php/contact-form.php" method="POST">
+            {{-- <form class="contact-form" action="php/contact-form.php" method="POST">
                 <div class="contact-form-success alert alert-success d-none mt-4">
                     <strong>Success!</strong> Your message has been sent to us.
                 </div>
@@ -52,6 +52,33 @@
                         <input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
                     </div>
                 </div>
+            </form> --}}
+
+            <form id="contactForm" class="p-4 shadow rounded bg-white">
+                <div class="row">
+                    <div class="form-group col-lg-6 mb-3">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group col-lg-6 mb-3">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Subject</label>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Message</label>
+                    <textarea class="form-control" name="message" rows="5" placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-modern w-100">
+                    Kirim ke WhatsApp
+                </button>
             </form>
 
         </div>
@@ -65,18 +92,6 @@
                     <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="">mail@example.com</a></li>
                 </ul>
             </div>
-
-            <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="950">
-                <h4 class="pt-5">Business <strong>Hours</strong></h4>
-                <ul class="list list-icons list-dark mt-2">
-                    <li><i class="far fa-clock top-6"></i> Monday - Friday - 9am to 5pm</li>
-                    <li><i class="far fa-clock top-6"></i> Saturday - 9am to 2pm</li>
-                    <li><i class="far fa-clock top-6"></i> Sunday - Closed</li>
-                </ul>
-            </div>
-
-            <h4 class="pt-5">Get in <strong>Touch</strong></h4>
-            <p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
         </div>
 

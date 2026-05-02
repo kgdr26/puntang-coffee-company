@@ -136,5 +136,28 @@
 				});
 			}
 		</script>
+
+		<script>
+			document.getElementById("contactForm").addEventListener("submit", function(e) {
+				e.preventDefault();
+
+				let name = document.querySelector("[name='name']").value;
+				let email = document.querySelector("[name='email']").value;
+				let subject = document.querySelector("[name='subject']").value;
+				let message = document.querySelector("[name='message']").value;
+
+				let text = `Halo, saya ingin menghubungi Anda:%0A
+			Nama: ${name}%0A
+			Email: ${email}%0A
+			Subject: ${subject}%0A
+			Pesan: ${message}`;
+
+				let waNumber = "6282315078798";
+
+				let url = `https://wa.me/${waNumber}?text=${text}`;
+
+				window.open(url, '_blank');
+			});
+		</script>
     </body>
 </html>
