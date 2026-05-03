@@ -161,7 +161,7 @@ $(function () {
                 alert(res.message);
                 initUI();
                 location.reload();
-                let url = "/administrator/formhomeheader/" + res.id;
+                let url = "/administrator/formhomeheader?id=" + res.id;
 
                 window.location.href = url;
             },
