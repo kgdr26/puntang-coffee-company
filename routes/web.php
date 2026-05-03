@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Administrator\AuthController;
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Administrator\HomeLandingController;
 use App\Http\Controllers\Administrator\AcvEventCOntroller;
 use App\Http\Controllers\Administrator\AcvCSRController;
 use App\Http\Controllers\Administrator\GeneralSettingController;
@@ -49,6 +50,11 @@ Route::prefix('administrator')->group(function(){
     Route::middleware('admin')->group(function(){
 
         Route::get('/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
+
+        Route::get('/mnghome',[HomeLandingController::class,'index'])->name('admin.mnghome');
+        Route::match(['get', 'post'], '/formhomeheader', [HomeLandingController::class, 'formheader'])->name('admin.formhomeheader');
+        Route::post('/actionhomeheader', [HomeLandingController::class, 'actionheader'])->name('admin.actionhomeheader');
+        Route::match(['get', 'post'], '/formhomecontent', [HomeLandingController::class, 'formcontent'])->name('admin.formhomecontent');
 
         Route::get('/mngevent',[AcvEventCOntroller::class,'index'])->name('admin.mngevent');
         Route::match(['get', 'post'], '/formevent', [AcvEventCOntroller::class, 'form'])->name('admin.formevent');

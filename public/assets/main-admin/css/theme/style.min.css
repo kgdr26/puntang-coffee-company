@@ -4952,7 +4952,7 @@ a[data-toggle=lightbox] .img-fluid {
 .theme-loader {
     height: 100%;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff36;
     position: fixed;
     z-index: 999999;
     top: 0

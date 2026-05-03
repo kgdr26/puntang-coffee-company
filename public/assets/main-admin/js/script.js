@@ -146,7 +146,7 @@ $(document).ready(function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
     $('.theme-loader').fadeOut('slow', function() {
-        $(this).remove();
+        $(this).hide();
     });
 });
 
@@ -355,3 +355,15 @@ $('#styleSelector').append('' +
     '</li>' +
 '</ul>'+
 '');
+
+
+function initUI() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    $('.theme-loader').fadeOut('slow', function() {
+        $(this).hide();
+    });
+}

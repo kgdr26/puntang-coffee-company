@@ -38,7 +38,8 @@
                             data-start="700"
                             data-fontsize="['22','22','22','40']"
                             data-lineheight="['25','25','25','45']"
-                            data-transform_in="y:[-50%];opacity:0;s:500;">{{ $vs->ths_text_1 }}</div>
+                            data-transform_in="y:[-50%];opacity:0;s:500;"
+                            style="color: #FFFFFF;">{!! $vs->ths_text_1 !!}</div>
 
                         <div class="tp-caption d-none d-md-block"
                             data-frames='[{"delay":2400,"speed":500,"frame":"0","from":"opacity:0;x:10%;","to":"opacity:1;x:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
@@ -57,7 +58,8 @@
                             data-x="center"
                             data-y="center"
                             data-fontsize="['50','50','50','90']"
-                            data-lineheight="['55','55','55','95']">{{ $vs->ths_text_2 }}</div>
+                            data-lineheight="['55','55','55','95']"
+                            style="color: #FFFFFF;">{!! $vs->ths_text_2 !!}</div>
 
                         <div class="tp-caption font-weight-light"
                             data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
@@ -65,7 +67,7 @@
                             data-y="center" data-voffset="['40','40','40','80']"
                             data-fontsize="['18','18','18','50']"
                             data-lineheight="['20','20','20','55']"
-                            style="color: #b5b5b5;">{{ $vs->ths_text_3 }}</div>
+                            style="color: #FFFFFF;">{!! $vs->ths_text_3 !!}</div>
 
                     </li>
                 @else
@@ -90,7 +92,7 @@
                             data-start="700"
                             data-fontsize="['16','16','16','40']"
                             data-lineheight="['25','25','25','45']"
-                            data-transform_in="y:[-50%];opacity:0;s:500;">{{ $vs->ths_text_1 }}</div>
+                            data-transform_in="y:[-50%];opacity:0;s:500;">{!! $vs->ths_text_1 !!}</div>
 
                         <div class="tp-caption"
                             data-x="center" data-hoffset="['170','170','170','350']"
@@ -104,7 +106,7 @@
                             data-x="center"
                             data-y="center"
                             data-fontsize="['50','50','50','90']"
-                            data-lineheight="['55','55','55','95']">{{ $vs->ths_text_2 }}</div>
+                            data-lineheight="['55','55','55','95']">{!! $vs->ths_text_2 !!}</div>
 
                         <div class="tp-caption font-weight-light ws-normal text-center"
                             data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
@@ -113,7 +115,7 @@
                             data-width="['530','530','530','1100']"
                             data-fontsize="['18','18','18','40']"
                             data-lineheight="['26','26','26','45']"
-                            style="color: #b5b5b5;">{{ $vs->ths_text_3 }}</div>
+                            style="color: #FFFFFF;">{!! $vs->ths_text_3 !!}</div>
 
                     </li>
                 @endif

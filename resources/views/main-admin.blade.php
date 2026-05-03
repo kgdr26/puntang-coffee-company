@@ -8,6 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
         <meta name="description" content="#">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="keywords"
             content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
         <meta name="author" content="#">
@@ -37,9 +38,16 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/main-admin/css/jquery.mCustomScrollbar.css') }}">
 
         <style>
-            .ck-editor__editable {
+            /* .ck-editor__editable {
                 min-height: 50rem;
+            } */
+
+            #ths_text_1 + .ck-editor .ck-editor__editable,
+            #ths_text_2 + .ck-editor .ck-editor__editable,
+            #ths_text_3 + .ck-editor .ck-editor__editable {
+                height: 5rem !important;
             }
+            
         </style>
     </head>
 
@@ -131,6 +139,14 @@
         <script src="{{ asset('assets/main-admin/js/theme-persistence.html') }}"></script>
         <script src="{{ asset('assets/main-admin/js/vartical-layout.min.js') }}"></script>
         <script src="{{ asset('assets/main-admin/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                }
+            });
+        </script>
 
         @foreach($js as $src)
             <script src="{{ $src }}"></script>

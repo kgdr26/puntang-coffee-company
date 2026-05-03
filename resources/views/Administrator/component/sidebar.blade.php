@@ -1,8 +1,7 @@
 <nav class="pcoded-navbar">
     <div class="pcoded-inner-navbar main-menu">
+        <div class="pcoded-navigatio-lavel">Dashboard</div>
         <!-- Dashboard -->
-        <div class="pcoded-navigatio-lavel">Navigation</div>
-
         <ul class="pcoded-item pcoded-left-item">
 
             <li class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
@@ -12,11 +11,43 @@
                 </a>
             </li>
 
+        </ul>
+
+        <div class="pcoded-navigatio-lavel">Manage Landing Page</div>
+
+        <ul class="pcoded-item pcoded-left-item">
+
+            <li class="{{ request()->routeIs('admin.mnghome') || request()->routeIs('admin.formhomeheader') ? 'active' : '' }}">
+                <a href="{{ route('admin.mnghome') }}">
+                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                    <span class="pcoded-mtext">Home</span>
+                </a>
+            </li>
+
             <li class="">
                 <a href="">
-                    <span class="pcoded-micon"><i class="feather icon-package"></i></span>
+                    <span class="pcoded-micon"><i class="feather icon-align-justify"></i></span>
+                    <span class="pcoded-mtext">About</span>
+                </a>
+            </li>
+
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-box"></i></span>
                     <span class="pcoded-mtext">Product Management</span>
                 </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-mtext">Our Product</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-mtext">Product Methods</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
             <li class="pcoded-hasmenu {{ request()->routeIs('admin.mngevent') || request()->routeIs('admin.formevent') || request()->routeIs('admin.mngcsr') || request()->routeIs('admin.formcsr') ? 'active pcoded-trigger' : '' }}">
@@ -35,9 +66,19 @@
                             <span class="pcoded-mtext">CSR</span>
                         </a>
                     </li>
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-mtext">Outcomes</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
 
+        </ul>
+
+        <div class="pcoded-navigatio-lavel">General Management</div>
+
+        <ul class="pcoded-item pcoded-left-item">
             <li class="{{ request()->routeIs('admin.generalsetting') ? 'active' : '' }}">
                 <a href="{{ route('admin.generalsetting') }}">
                     <span class="pcoded-micon"><i class="feather icon-sliders"></i></span>
@@ -51,7 +92,6 @@
                     <span class="pcoded-mtext">Users Manage</span>
                 </a>
             </li>
-
         </ul>
 
     </div>

@@ -4,7 +4,8 @@
 
 <div class="page-wrapper">
     <div class="page-body">
-        <div class="row">
+
+        {{-- <div class="row">
             <!-- task, page, download counter  start -->
             <div class="col-xl-3 col-md-6">
                 <div class="card">
@@ -466,7 +467,8 @@
                 </div>
             </div>
             <!-- social end -->
-        </div>
+        </div> --}}
+
     </div>
 </div>
 

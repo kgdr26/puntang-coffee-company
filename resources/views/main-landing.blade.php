@@ -54,6 +54,14 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="{{ asset('assets/landing-page/css/custom.css') }}">
 
+		<style>
+			.tp-caption p,
+            .tp-caption p strong,
+            .tp-caption p i{
+                color: #ffffff !important;
+            }
+		</style>
+
 	</head>
     <body data-plugin-page-transition>
 
