@@ -161,10 +161,15 @@ $(function () {
                 alert(res.message);
                 initUI();
                 location.reload();
+                let url = "/administrator/formhomeheader/" + res.id;
+
+                window.location.href = url;
             },
             error: function (err) {
                 console.log(err);
                 alert('Error saving data');
+                $('.theme-loader').hide(); // penting
+                initUI();
             }
         });
 
