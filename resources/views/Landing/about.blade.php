@@ -44,7 +44,7 @@
                         <strong class="font-weight-extra-bold">{{ $get_sec_one->tas_title }}</strong>
                     </h2>
                 </div>
-                <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">
+                <p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400" style="text-align: justify;">
                     {{ $get_sec_one->tas_content }}
                 </p>
             </div>
@@ -113,7 +113,7 @@
 
 <div class="container pt-5 pb-2">
     <div class="overflow-hidden mb-3">
-        <p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
+        <p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200" style="text-align: justify;">
             {{ $get_sec_two->tas_content }}
         </p>
     </div>

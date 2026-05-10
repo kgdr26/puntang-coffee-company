@@ -92,6 +92,8 @@ class ActivityController extends Controller
             
         ];
 
+        $data['list_program'] = DB::table('trx_program')->get();
+
         return view('Landing.activity.program', $data);
     }
 

@@ -6,9 +6,8 @@
         <div class="row py-5 my-4">
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
                 <h5 class="text-3 mb-3">About Us</h5>
-                <p class="pe-1">
-                    Lembaga Masyarakat Desa Hutan Bukit Amanah Gunung Puntang
-                    LMDH Bukit Amanah Gunung Puntang, Desa Campakamulya, Kecamatan Cimaung, Kabupaten Bandung, Provinsi Jawa Barat
+                <p class="pe-1" style="text-align: justify;">
+                    <strong>LMDH Bukit Amanah Gunung Puntang</strong> is a community-based social forestry organization located in Mount Puntang, West Java. Since 2017, the community has been committed to sustainable coffee farming through eco-friendly and chemical-free cultivation methods while preserving the surrounding forest ecosystem.
                 </p>
                 <div class="alert alert-success d-none" id="newsletterSuccess">
                     <strong>Success!</strong> You've been added to our email list.
@@ -24,15 +23,17 @@
                     <ul class="list list-icons list-icons-lg">
                         <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">LMDH Bukit Amanah Gunung Puntang</p></li>
                         <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="">+62 823-1507-8798</a></p></li>
-                        <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="">mail@example.com</a></p></li>
+                        {{-- <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="">mail@example.com</a></p></li> --}}
                     </ul>
                 </div>
             </div>
             <div class="col-md-6 col-lg-2">
-                <h5 class="text-3 mb-3">FOLLOW US</h5>
+                <h5 class="text-3 mb-3">Marketplace</h5>
                 <ul class="social-icons">
                     {{-- Ling shopee dan logo nya --}}
-                    <li class="social-icons-facebook"><a href="https://shopee.co.id/puntangwangicoffee" target="_blank" title="Facebook"><i class="fab fa-shopify"></i></a></li>
+                    <li class="">
+                        <a href="https://shopee.co.id/puntangwangicoffee" target="_blank" title="Shopee" style="background: transparent;"><img src="https://cdn.simpleicons.org/shopee" width="24" alt="Shopee"></a>
+                    </li>
                 </ul>
             </div>
         </div>

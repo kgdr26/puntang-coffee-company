@@ -89,7 +89,9 @@
                                 </nav>
                             </div>
                             <ul class="header-social-icons social-icons d-none d-sm-block">
-                                <li class="social-icons-facebook"><a href="https://shopee.co.id/puntangwangicoffee" target="_blank" title="Facebook"><i class="fab fa-shopify"></i></a></li>
+                                <li class="">
+                                    <a href="https://shopee.co.id/puntangwangicoffee" target="_blank" title="Shopee" style="background: transparent;"><img src="https://cdn.simpleicons.org/shopee" width="24" alt="Shopee"></a>
+                                </li>
                             </ul>
                             <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
                                 <i class="fas fa-bars"></i>

@@ -21,7 +21,7 @@
 
 		<!-- Web Fonts  -->
 		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
-
+		
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/bootstrap/css/bootstrap.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/landing-page/vendor/fontawesome-free/css/all.min.css') }}">

@@ -220,7 +220,7 @@
 
                     <div class="pe-3 ps-md-5 pb-3 pb-sm-0 py-lg-5 my-lg-4 border-left-light border-sm-none">
                         <h4 class="mb-2">{{ $val->trh_title }}</h4>
-                        <p class="mb-2">
+                        <p class="mb-2" style="text-align: justify;">
                             {{ $val->trh_content }}
                         </p>
                     </div>
@@ -235,7 +235,7 @@
 
                     <div class="pe-3 ps-md-5 pb-3 pb-sm-0 py-lg-5 my-lg-4 border-left-light border-sm-none">
                         <h4 class="mb-2">{{ $val->trh_title }}</h4>
-                        <p class="mb-2">
+                        <p class="mb-2" style="text-align: justify;">
                             {{ $val->trh_content }}
                         </p>
                     </div>

@@ -31,7 +31,7 @@
                     </div>
                 </form>
                 <h5 class="font-weight-semi-bold pt-4">About Us</h5>
-				<p>“We Care, We Share” LMDH Bukit Amanah Gunung Puntang bersama NIPPON STEEL. *(directing to the explanation of CSR)</p>
+				<p style="text-align: justify;">“We Care, We Share” LMDH Bukit Amanah Gunung Puntang bersama NIPPON STEEL. *(directing to the explanation of CSR)</p>
             </aside>
         </div>
         <div class="col-lg-9">
@@ -69,7 +69,7 @@
                                     <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2">
                                         <a href="{{ route('getevent', ['id' => Hashids::encode($val->tre_id)]) }}">{{ $val->tre_title }}</a>
                                     </h2>
-                                    <p class="mb-0">
+                                    <p class="mb-0" style="text-align: justify;">
                                         {{ \Illuminate\Support\Str::limit(strip_tags($val->tre_content), 400, '... ...') }}
                                     </p>
                                 </div>
