@@ -26,24 +26,20 @@
             <div class="cascading-images-wrapper">
                 <div class="cascading-images position-relative">
                     <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}">
-                        <img src="{{ asset('assets/img/csr/f1.png') }}" class="appear-animation" width="500" alt="" data-appear-animation="expandIn" data-appear-animation-duration="600ms" />
+                        <img src="{{ asset('assets/img/csr/f1.png') }}" class="appear-animation" width="300" height="300" alt="" data-appear-animation="expandIn" data-appear-animation-duration="600ms" />
                     </div>
                     <div class="position-absolute w-100" style="top: 41%; left: -30%;">
                         <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}">
-                            <img src="{{ asset('assets/img/csr/f2.jpg') }}" class="appear-animation" width="500" alt="" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms" />
+                            <img src="{{ asset('assets/img/csr/f2.jpg') }}" class="appear-animation" width="300" height="200" alt="" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms" />
                         </div>
                     </div>
                     <div class="position-absolute w-100" style="top: 75%; left: 30%;">
                         <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}">
-                            <img src="{{ asset('assets/img/csr/f3.jpeg') }}" class="appear-animation" width="500" alt="" data-appear-animation="expandIn" data-appear-animation-delay="600" data-appear-animation-duration="600ms" />
+                            <img src="{{ asset('assets/img/csr/f3.jpeg') }}" class="appear-animation" width="300" alt="" data-appear-animation="expandIn" data-appear-animation-delay="600" data-appear-animation-duration="600ms" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="floatingEffectCascadingImagesPopup" class="dialog dialog-lg zoom-anim-dialog mfp-hide mfp-close-out px-3">
-                
-            </div>
-
         </div>
         <div class="col-md-4 py-lg-5 my-lg-5 mb-4 order-1 order-md-2">
 
@@ -56,13 +52,7 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <hr class="solid my-5">
-        </div>
-    </div>
-
-    <div class="row align-items-center py-5">
+    <div class="row align-items-center py-0">
         <div class="col-md-4 py-lg-5 my-lg-5 mb-4">
 
             <div class="pe-3 pe-md-5 pb-3 pb-sm-0 py-lg-5 my-lg-4 border-right-light border-sm-none">
@@ -135,7 +125,7 @@
 
                     <div class="post-image ms-0">
                         <div class="ratio ratio-16x9">
-                            <iframe  src="https://www.youtube.com/embed/HGsoU49oMTU?si=d056HUKg-Tzu3HB6" width="640" height="360" allowfullscreen></iframe>
+                            <iframe  src="https://drive.google.com/file/d/1jzUHeplzJhaLmgPz_PLUEh_Ksf7Ex0wu/preview" width="640" height="360" allowfullscreen></iframe>
                         </div>
                     </div>
 

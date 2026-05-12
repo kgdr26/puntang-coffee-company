@@ -39,7 +39,7 @@
 
                 @foreach($loop_img as $vg)
                     <div>
-                        <img alt="" class="img-fluid rounded" src="{{ asset('assets/img/proccess/'.$vg) }}">
+                        <img alt="" class="img-fluid rounded" src="{{ asset('assets/img/proccess/'.$vg) }}" style="width: 100%;height: 10rem;">
                     </div>
                 @endforeach
 
@@ -72,33 +72,6 @@
                     </div>
                 @endforeach
 
-                {{-- <div class="process-step col-lg-3 mb-5 mb-lg-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                    <div class="process-step-circle process-shapes-always-animate-delay">
-                        <strong class="process-step-circle-content">02</strong>
-                    </div>
-                    <div class="process-step-content">
-                        <h4 class="mb-1 text-5 font-weight-bold">Natural Process</h4>
-                        <p class="mb-0">Buah kopi dikeringkan secara utuh bersama kulitnya sehingga menciptakan rasa buah yang kaya dan manis, seperti cokelat hitam, buah beri, dan sedikit rasa kayu manis.</p>
-                    </div>
-                </div>
-                <div class="process-step col-lg-3 mb-5 mb-lg-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
-                    <div class="process-step-circle">
-                        <strong class="process-step-circle-content">03</strong>
-                    </div>
-                    <div class="process-step-content">
-                        <h4 class="mb-1 text-5 font-weight-bold">Washed Process</h4>
-                        <p class="mb-0">Metode yang membutuhkan proses pencucian biji kopi dan pembersihan kulit dengan air sebelum pengeringan untuk menghasilkan cita rasa yang lebih bersih, asam lebih terang, dan sentuhan floral serta sitrus.</p>
-                    </div>
-                </div>
-                <div class="process-step col-lg-3 mb-5 mb-lg-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
-                    <div class="process-step-circle">
-                        <strong class="process-step-circle-content">04</strong>
-                    </div>
-                    <div class="process-step-content">
-                        <h4 class="mb-1 text-5 font-weight-bold">Wine Process</h4>
-                        <p class="mb-0">Biji kopi melalui proses fermentasi seperti pembuatan anggur untuk menghasilkan cita rasa kompleks dan khas dengan nuansa buah-buahan matang, rempah, dan sedikit rasa manis.</p>
-                    </div>
-                </div> --}}
             </div>
 
         </div>
